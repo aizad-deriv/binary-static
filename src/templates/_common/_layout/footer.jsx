@@ -52,7 +52,7 @@ const Footer = () => (
                                     { text: it.L('Binary.com in Numbers'),  href: it.url_for('binary-in-numbers') },
                                     { text: it.L('Careers'),                href: it.deriv_career_url ,                   target: '_blank' },
                                     { text: it.L('Patents'),                href: it.url_for('legal/us_patents') },
-                                    { text: it.L('Contact Us'),             href: it.url_for('contact') },
+                                    { text: it.L('Contact Us'),             href: 'https://deriv.com/help-centre' },
                                 ]}
                             />
 
@@ -136,7 +136,7 @@ const Footer = () => (
                                     { media: 'youtube',   href: 'https://www.youtube.com/user/BinaryTradingVideos' },
                                     { media: 'facebook',  href: 'https://www.facebook.com/derivdotcom' },
                                     { media: 'twitter',   href: 'https://www.twitter.com/derivdotcom' },
-                                    { media: 'telegram',  href: 'https://t.me/binarydotcom' },
+                                    { media: 'telegram',  href: 'https://t.me/derivdotcomofficial' },
                                     { media: 'reddit',    href: 'https://www.reddit.com/user/Deriv_official/' },
                                 ]}
                             />
@@ -178,7 +178,7 @@ const Footer = () => (
                                     </a>
                                 </div>
                                 <div className='age-restriction-sign'>
-                                    <img className='responsive' src={it.url_for('images/pages/footer/18+.svg')} />
+                                    <img className='responsive' src={it.url_for('images/pages/footer/18.svg')} />
                                 </div>
                             </div>
                             <SocialIcons
@@ -188,7 +188,7 @@ const Footer = () => (
                                     { media: 'facebook', href: 'https://www.facebook.com/derivUK/' },
                                     { media: 'twitter', href: 'https://www.twitter.com/deriv_uk/' },
                                     { media: 'instagram', href: 'https://www.instagram.com/deriv_uk/' },
-                                    { media: 'telegram', href: 'https://t.me/binarydotcom' },
+                                    { media: 'telegram', href: 'https://t.me/derivdotcomofficial' },
                                     { media: 'reddit', href: 'https://www.reddit.com/user/Deriv_official/' },
                                 ]}
                             />
@@ -200,7 +200,7 @@ const Footer = () => (
                                     { media: 'facebook', href: 'https://www.facebook.com/derivEU/' },
                                     { media: 'twitter', href: 'https://www.twitter.com/deriv_eu/' },
                                     { media: 'instagram', href: 'https://www.instagram.com/deriv_eu/' },
-                                    { media: 'telegram', href: 'https://t.me/binarydotcom' },
+                                    { media: 'telegram', href: 'https://t.me/derivdotcomofficial' },
                                     { media: 'reddit', href: 'https://www.reddit.com/user/Deriv_official/' },
                                 ]}
                             />
