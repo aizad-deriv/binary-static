@@ -407,7 +407,16 @@ class Markets extends React.Component {
                                     >
                                         <span className={`icon ${key} ${active_market === key ? 'active' : ''}`} />
                                         <span>{obj.name}</span>
+                                        {
+                                            Object.keys(obj.subgroups).length > 0 && (
+                                                <div>
+                                                    {Object.keys(obj.subgroups).map(sub => <span key={obj.subgroups[sub].name}>{obj.subgroups[sub].name}</span>
+                                                    )}
+                                                </div>
+                                            )
+                                        }
                                     </div>
+                                    
                                 )}
                             </div>
                             <div className='mobile'>
