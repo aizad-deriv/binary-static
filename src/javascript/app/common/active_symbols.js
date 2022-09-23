@@ -61,6 +61,7 @@ const ActiveSymbols = (() => {
                 name     : symbol.market_display_name,
                 is_active: !symbol.is_trading_suspended && symbol.exchange_is_open,
             };
+            getSubgroupsForMarket(market_symbols, markets[market_name]);
             getSubmarketsForMarket(market_symbols, markets[market_name]);
         });
         return clone(markets);
@@ -70,6 +71,28 @@ const ActiveSymbols = (() => {
         markets    = {};
         symbols    = {};
         submarkets = {};
+    };
+
+    const getSubgroupsForMarket = (all_symbols, market) => {
+        if (!isEmptyObject(market.subgroups)) {
+            return clone(market.subgroups);
+        }
+
+        market.subgroups = {};
+
+        const all_subgroups = groupBy(all_symbols, 'subgroup');
+        Object.keys(all_subgroups).forEach((key) => {
+            const subgroup_name = key;
+            const subgroup_symbols = all_subgroups[key];
+            const symbol = subgroup_symbols[0];
+            if (subgroup_name !== 'none') {
+                market.subgroups[subgroup_name] = {
+                    name: symbol.subgroup_display_name,
+                };
+                getSubmarketsForMarket(subgroup_symbols, market.subgroups[subgroup_name]);
+            }
+        });
+        return clone(market.subgroups);
     };
 
     const getSubmarketsForMarket = (all_symbols, market) => {
@@ -106,6 +129,7 @@ const ActiveSymbols = (() => {
                     pip        : symbol.pip,
                     market     : symbol.market,
                     submarket  : symbol.submarket,
+                    subgroup   : symbol.subgroup,
                 };
             });
         }
