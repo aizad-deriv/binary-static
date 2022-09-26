@@ -25,7 +25,7 @@ const AccountDesc = ({ title, description, account_type, landing_company_short, 
             </ul>
             <p  data-show='-eucountry' className='center-text-m'>
                 <a className='button button-full-width-m' href={it.url_for('metatrader/types-of-accounts')} target='_blank'>
-                    <span>{it.L('Find out more')}</span>
+                    <span>{it.L('Compare MetaTrader 5 accounts')}</span>
                 </a>
             </p>
         </div>
@@ -242,6 +242,18 @@ const Metatrader = () => (
                         ]}
                     />
 
+                    <AccountDesc
+                        account_type={'gaming_financial'}
+                        title={it.L('Derived Account')}
+                        description={it.L('Our Derived account allows you to trade CFDs on Derived Indices - our proprietary Derived assets that simulate market forces.')}
+                        items={[
+                            it.L('Leverage up to 1:1000'),
+                            it.L('Fixed spreads'),
+                            it.L('Market execution'),
+                            it.L('No commission'),
+                        ]}
+                    />
+
                     {/* <AccountDesc
                         account_type={'financial_financial_stp'}
                         title={it.L('Financial STP Account')}
@@ -254,17 +266,6 @@ const Metatrader = () => (
                         ]}
                     /> */}
 
-                    {/* <AccountDesc
-                        account_type={'gaming_financial'}
-                        title={it.L('Synthetic Account')}
-                        description={it.L('Our Synthetic account allows you to trade CFDs on Synthetic Indices - our proprietary synthetic assets that simulate market forces.')}
-                        items={[
-                            it.L('Leverage up to [_1]', '1:1000'),
-                            it.L('Fixed spreads'),
-                            it.L('Market execution'),
-                            it.L('No commission'),
-                        ]}
-                    /> */}
                 </div>
                 <div id='frm_new_accounts'>
                     <form id='frm_new_account'>
