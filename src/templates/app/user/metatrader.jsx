@@ -521,7 +521,7 @@ const Metatrader = () => (
                             <div className='fill-bg-color center-text mt-container'>
                                 <div className='gr-10 gr-push-1 gr-12-m gr-push-0-m'>
                                     <h3 className='secondary-color'>{it.L('How to manage your funds')}</h3>
-                                    <p className='hint'>{it.L('Deposits and withdrawals for your MetaTrader 5 account always pass through your binary options account.')}</p>
+                                    <p className='hint'>{it.L('Deposits and withdrawals for your MT5 account always pass through your binary options account.')}</p>
                                     <div className='gr-row'>
                                         <div className='gr-5 gr-no-gutter-m'>
                                             <img src={it.url_for('images/pages/metatrader/dashboard/binary_wallet.svg')} />
@@ -549,7 +549,7 @@ const Metatrader = () => (
                             <div className='gr-6 gr-12-m flex'>
                                 <div className='mt-panel mt-container'>
                                     <form id='frm_deposit'>
-                                        <CashierDesc title={it.L('Transfer funds to your MT5 account')} arrow_direction='right' desc={it.L('Transfer funds from your binary options account into your MetaTrader 5 account.')} />
+                                        <CashierDesc title={it.L('Transfer funds to your MT5 account')} arrow_direction='right' desc={it.L('Transfer funds from your binary options account into your MT5 account.')} />
 
                                         <div className='form'>
                                             <FormRow is_two_rows type='text' id='txt_amount_deposit' label={it.L('Amount')} attributes={{ maxLength: 10 }} hint={it.L('Subject to [_1] transfer fee or [_2], whichever is higher', '<strong id="transfer_fee_amount_to"></strong>', '<strong id="transfer_fee_minimum_to"></strong>')} />
@@ -571,7 +571,7 @@ const Metatrader = () => (
                             <div className='gr-6 gr-12-m flex'>
                                 <div className='mt-panel mt-container'>
                                     <form id='frm_withdrawal'>
-                                        <CashierDesc title={it.L('Withdraw funds from your MT5 account')} arrow_direction='left' desc={it.L('Transfer funds from your MetaTrader 5 account into your binary options account.')} />
+                                        <CashierDesc title={it.L('Withdraw funds from your MT5 account')} arrow_direction='left' desc={it.L('Transfer funds from your MT5 account into your binary options account.')} />
 
                                         <div className='form'>
                                             <FormRow is_two_rows type='text' id='txt_amount_withdrawal' label={it.L('Amount')} attributes={{ maxLength: 10 }} hint={it.L('Subject to [_1] transfer fee or [_2], whichever is higher', '<strong id="transfer_fee_amount_from"></strong>', '<strong id="transfer_fee_minimum_from"></strong>')} />
