@@ -253,19 +253,6 @@ const Metatrader = () => (
                             it.L('No commission'),
                         ]}
                     />
-
-                    {/* <AccountDesc
-                        account_type={'financial_financial_stp'}
-                        title={it.L('Financial STP Account')}
-                        description={it.L('Our MetaTrader 5 Financial STP account provides you with tight spreads, higher ticket size and offers more products.')}
-                        items={[
-                            it.L('Leverage up to [_1]', '1:100'),
-                            it.L('Variable spreads'),
-                            it.L('Market execution'),
-                            it.L('No commission'),
-                        ]}
-                    /> */}
-
                 </div>
                 <div id='frm_new_accounts'>
                     <form id='frm_new_account'>
