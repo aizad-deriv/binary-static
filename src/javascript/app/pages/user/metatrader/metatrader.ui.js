@@ -721,9 +721,14 @@ const MetaTraderUI = (() => {
             $form.find('#view_3').find('#trading_password_new_user').setVisibility(1);
         } else {
             $form.find('#view_3').find('#trading_password_new_user').setVisibility(0);
+            const mt5_label = isEuCountry() ? localize('CFDs') : localize('MT5 Financial');
             $form.find('#view_3').find('#trading_password_existing_user')
                 .html(localize(
-                    'Set a trading password. Use this to log in and trade on MT5.',
+                    'Enter your MT5 password to add a [_1] [_2] account.',
+                    [
+                        is_demo ? localize('demo') : localize('real'),
+                        is_synthetic ? localize('MT5 Synthetic') : mt5_label,
+                    ]
                 ))
                 .setVisibility(1);
         }
