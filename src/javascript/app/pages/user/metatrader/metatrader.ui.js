@@ -931,7 +931,6 @@ const MetaTraderUI = (() => {
             $form.find('#view_1 .step-2').setVisibility(1);
         } else {
             const new_acc_type = newAccountGetType();
-            console.log('penis', selected_acc_type);
             displayAccountDescription(new_acc_type);
             actions_info[action].prerequisites(new_acc_type).then((error_msg) => {
                 displayMessage('#new_account_msg', error_msg || '');
