@@ -400,6 +400,12 @@ const MetaTraderUI = (() => {
         if (acc_type) {
             $account_type_desc = $account_desc.find(`.${acc_type}`);
 
+            // remove extra characters for real account to return the account description
+            if ($account_type_desc.length === 0 && acc_type.includes('real')) {
+                const formatted_acc_type = acc_type.slice(0, -9);
+                $account_type_desc = $account_desc.find(`.${formatted_acc_type}`);
+            }
+
             landing_company_short = MetaTraderConfig.getSampleAccount(acc_type).landing_company_short;
 
             if ($account_type_desc.length === 2) {
@@ -408,11 +414,6 @@ const MetaTraderUI = (() => {
                 // try to find the landing_company specific description first,
                 // otherwise fall back to the first item (the general description)
                 $account_type_desc = $specific_description.length ? $specific_description : $account_type_desc.first();
-            }
-            // remove extra characters for real account to return the account description
-            if ($account_type_desc.length === 0 && acc_type.includes('real')) {
-                const formatted_acc_type = acc_type.slice(0, -9);
-                $account_type_desc = $account_desc.find(`.${formatted_acc_type}`);
             }
         }
         const $el_to_clone = $account_type_desc.length ? $account_type_desc : $general_description;
