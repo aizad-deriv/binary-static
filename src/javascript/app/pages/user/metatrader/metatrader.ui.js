@@ -409,6 +409,11 @@ const MetaTraderUI = (() => {
                 // otherwise fall back to the first item (the general description)
                 $account_type_desc = $specific_description.length ? $specific_description : $account_type_desc.first();
             }
+            // remove extra characters for real account to return the account description
+            if ($account_type_desc.length === 0 && acc_type.includes('real')) {
+                const formatted_acc_type = acc_type.slice(0, -9);
+                $account_type_desc = $account_desc.find(`.${formatted_acc_type}`);
+            }
         }
         const $el_to_clone = $account_type_desc.length ? $account_type_desc : $general_description;
         $container.find('#account_desc').html($el_to_clone.clone());
@@ -920,13 +925,13 @@ const MetaTraderUI = (() => {
         const action            = 'new_account';
         if (/(demo|real)/.test(selected_acc_type)) {
             displayMessage('#new_account_msg', (selected_acc_type === 'real' && Client.get('is_virtual') && real_financial_acc_number > 0) ? MetaTraderConfig.needsRealMessage() : '', true);
-            displayAccountDescription(selected_acc_type);
             updateAccountTypesUI(selected_acc_type);
             switchAccountTypesUI(selected_acc_type, $form);
             $form.find('#view_1 .btn-next').addClass('button-disabled');
             $form.find('#view_1 .step-2').setVisibility(1);
         } else {
             const new_acc_type = newAccountGetType();
+            console.log('penis', selected_acc_type);
             displayAccountDescription(new_acc_type);
             actions_info[action].prerequisites(new_acc_type).then((error_msg) => {
                 displayMessage('#new_account_msg', error_msg || '');
