@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import classNames from 'classnames';
 import Symbols from './symbols';
 // Should be remove in the future
 import Defaults from './defaults';
@@ -106,6 +107,8 @@ class Markets extends React.Component {
             active_market          : market_symbol,
             query                  : '',
             open_dropdown_scroll_id: 0,
+            open_accordion         : false,
+            market_active          : false,
         };
         this.el_underlying.value = underlying_symbol;
     }
@@ -121,11 +124,16 @@ class Markets extends React.Component {
     /* eslint-disable no-undef */
     closeDropdown = () => {
         this.setState({
-            open   : false,
-            query  : '',
-            markets: this.markets_all,
+            open          : false,
+            query         : '',
+            markets       : this.markets_all,
+            open_accordion: false,
         });
     };
+
+    toggleAccordion = () => {
+        this.setState({ open_accordion: !this.state.open_accordion });
+    }
 
     getCurrentUnderlying = () => {
         const { underlying: { name: underlying } } = this.state;
@@ -152,6 +160,17 @@ class Markets extends React.Component {
         Object.entries(market_nodes).forEach(([key, node]) => {
 
             if (node && node.offsetParent && node.offsetTop - 41 <= position) {
+                if (key === 'baskets' || key === 'synthetics') {
+                    this.setState({
+                        market_active : true,
+                        open_accordion: true,
+                    });
+                } else {
+                    this.setState({
+                        market_active : false,
+                        open_accordion: false,
+                    });
+                }
                 arr.push(key);
             }
         });
@@ -300,7 +319,7 @@ class Markets extends React.Component {
         const filter_markets = [];
         markets_all.map(([key, market]) => {
             let found_for_market = false; // To check market contains any matching underlying.
-            const filter_submarkets = {};
+
             Object.entries(market.submarkets).map(([key_2, submarket]) => {
                 let found_for_submarket = false; // Same as found for market
                 const filter_symbols = {};
@@ -330,7 +349,6 @@ class Markets extends React.Component {
 
         // nothing found
         if (!filter_markets.length) return;
-
         this.setState({ markets: filter_markets, active_market: filter_markets[0][0] });
     }
 
@@ -339,6 +357,7 @@ class Markets extends React.Component {
         const { list } = this.references;
         const node = this.references.market_nodes[key];
         const offset = node.dataset.offsetTop - list.offsetTop;
+        
         scrollToPosition(list, offset, 0);
     }
 
@@ -352,6 +371,8 @@ class Markets extends React.Component {
             query,
             market,
             open,
+            open_accordion,
+            market_active,
         } = this.state;
         const {
             getCurrentUnderlying,
@@ -363,8 +384,20 @@ class Markets extends React.Component {
             onUnderlyingClick,
             saveRef,
             scrollToMarket,
+            toggleAccordion,
         } = this;
 
+        const subGs = {};
+        markets.forEach(([key, obj]) => {
+            if (subGs[obj.subgroup_name]){
+                subGs[obj.subgroup_name].subcats =
+                Array.isArray(subGs[obj.subgroup_name].subcats)
+                    ? subGs[obj.subgroup_name].subcats : [];
+                subGs[obj.subgroup_name].subcats.push({ name: obj.name, key });
+            } else {
+                subGs[obj.subgroup_name] = { subcats: [{ name: obj.name, key }] };
+            }
+        });
         return (
             <div className='markets'>
                 <div
@@ -399,25 +432,54 @@ class Markets extends React.Component {
                     <div className='markets_view'>
                         <div className='markets_column'>
                             <div className='desktop'>
-                                {markets.map(([key, obj]) =>
-                                    <div
-                                        className={`market ${active_market === key ? 'active' : ''}`}
-                                        key={key}
-                                        onClick={scrollToMarket.bind(null,`${key}`)}
-                                    >
-                                        <span className={`icon ${key} ${active_market === key ? 'active' : ''}`} />
-                                        <span>{obj.name}</span>
-                                        {
-                                            Object.keys(obj.subgroups).length > 0 && (
-                                                <div>
-                                                    {Object.keys(obj.subgroups).map(sub => <span key={obj.subgroups[sub].name}>{obj.subgroups[sub].name}</span>
-                                                    )}
+
+                                {Object.keys(subGs).map((item) => (
+                                    <div key={item}>
+                                       
+                                        {item === 'null' ? (
+                                            <div>
+                                                {subGs[item].subcats.map((subcat) => (
+                                                    <div
+                                                        className={`market ${active_market === subcat.key ? 'active' : ''}`}
+                                                        key={subcat.key}
+                                                        onClick={scrollToMarket.bind(null, `${subcat.key}`)}
+                                                    >
+                                                       
+                                                        <span className={`icon ${subcat.key} ${active_market === subcat.key ? 'active' : ''}`} />
+                                                        <span>{subcat.name}</span>
+                                                    </div>))}
+                                            </div>
+                                        ) : (
+                                            <div
+                                                className='accordion'
+                                                key={item}
+                                            >
+                                                <div
+                                                    className={classNames('market accordion-label', {
+                                                        'accordion-label--active': open_accordion || market_active,
+                                                    })}
+                                                    onClick={toggleAccordion || (market_active ? toggleAccordion : '')}
+                                                >
+                                                    <span className={`icon ${item} ${open_accordion ? 'active' : ''}`} />
+                                                    <span>{item}</span>
+                                                    <span className={`accordion-icon icon ${open_accordion ? 'active' : ''}`} />
                                                 </div>
-                                            )
-                                        }
+                                                <div className={`${open_accordion ? 'accordion-content--active' : 'accordion-content'}`}>
+                                                    {subGs[item].subcats.map((subcat) => (
+                                                        <div
+                                                            className={`subgroup market ${active_market === subcat.key ? 'active' : ''}`}
+                                                            key={subcat.key}
+                                                            onClick={scrollToMarket.bind(null, `${subcat.key}`)}
+                                                        >
+                                                            <span>{subcat.name}</span>
+                                                        </div>
+                                                    ))}
+                                                </div>
+                                                
+                                            </div>
+                                        )}
                                     </div>
-                                    
-                                )}
+                                ))}
                             </div>
                             <div className='mobile'>
                                 <ul>
