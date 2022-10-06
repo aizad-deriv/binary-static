@@ -53,15 +53,19 @@ const ActiveSymbols = (() => {
         }
 
         const all_markets = groupBy(all_symbols, 'market');
-        Object.keys(all_markets).forEach((key) => {
+        const derived_markets = groupBy(all_markets.synthetic_index, 'subgroup');
+        delete all_markets.synthetic_index;
+        
+        const final_markets = { ...all_markets, ...derived_markets };
+        Object.keys(final_markets).forEach((key) => {
             const market_name    = key;
-            const market_symbols = all_markets[key];
+            const market_symbols = final_markets[key];
             const symbol         = market_symbols[0];
             markets[market_name] = {
-                name     : symbol.market_display_name,
-                is_active: !symbol.is_trading_suspended && symbol.exchange_is_open,
+                name         : symbol.market_display_name === 'Derived' ? symbol.subgroup_display_name : symbol.market_display_name,
+                is_active    : !symbol.is_trading_suspended && symbol.exchange_is_open,
+                subgroup_name: symbol.subgroup_display_name !== 'None' ? symbol.market_display_name : null,
             };
-            getSubgroupsForMarket(market_symbols, markets[market_name]);
             getSubmarketsForMarket(market_symbols, markets[market_name]);
         });
         return clone(markets);
@@ -71,28 +75,6 @@ const ActiveSymbols = (() => {
         markets    = {};
         symbols    = {};
         submarkets = {};
-    };
-
-    const getSubgroupsForMarket = (all_symbols, market) => {
-        if (!isEmptyObject(market.subgroups)) {
-            return clone(market.subgroups);
-        }
-
-        market.subgroups = {};
-
-        const all_subgroups = groupBy(all_symbols, 'subgroup');
-        Object.keys(all_subgroups).forEach((key) => {
-            const subgroup_name = key;
-            const subgroup_symbols = all_subgroups[key];
-            const symbol = subgroup_symbols[0];
-            if (subgroup_name !== 'none') {
-                market.subgroups[subgroup_name] = {
-                    name: symbol.subgroup_display_name,
-                };
-                getSubmarketsForMarket(subgroup_symbols, market.subgroups[subgroup_name]);
-            }
-        });
-        return clone(market.subgroups);
     };
 
     const getSubmarketsForMarket = (all_symbols, market) => {
@@ -129,7 +111,6 @@ const ActiveSymbols = (() => {
                     pip        : symbol.pip,
                     market     : symbol.market,
                     submarket  : symbol.submarket,
-                    subgroup   : symbol.subgroup,
                 };
             });
         }
