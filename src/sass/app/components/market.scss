@@ -159,11 +159,10 @@
                         flex-direction: column;
                         display: none;
 
-                        &--active{
+                        &--active {
                             display: block;
                         }
-
-                    }             
+                    }
                 }
                 .mobile {
                     display: none;
