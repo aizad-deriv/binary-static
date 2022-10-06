@@ -386,13 +386,9 @@ class Markets extends React.Component {
             scrollToMarket,
             toggleAccordion,
         } = this;
-
         const subGs = {};
         markets.forEach(([key, obj]) => {
             if (subGs[obj.subgroup_name]){
-                subGs[obj.subgroup_name].subcats =
-                Array.isArray(subGs[obj.subgroup_name].subcats)
-                    ? subGs[obj.subgroup_name].subcats : [];
                 subGs[obj.subgroup_name].subcats.push({ name: obj.name, key });
             } else {
                 subGs[obj.subgroup_name] = { subcats: [{ name: obj.name, key }] };
@@ -432,10 +428,8 @@ class Markets extends React.Component {
                     <div className='markets_view'>
                         <div className='markets_column'>
                             <div className='desktop'>
-
                                 {Object.keys(subGs).map((item) => (
                                     <div key={item}>
-                                       
                                         {item === 'null' ? (
                                             <div>
                                                 {subGs[item].subcats.map((subcat) => (
@@ -444,7 +438,6 @@ class Markets extends React.Component {
                                                         key={subcat.key}
                                                         onClick={scrollToMarket.bind(null, `${subcat.key}`)}
                                                     >
-                                                       
                                                         <span className={`icon ${subcat.key} ${active_market === subcat.key ? 'active' : ''}`} />
                                                         <span>{subcat.name}</span>
                                                     </div>))}
@@ -460,7 +453,7 @@ class Markets extends React.Component {
                                                     })}
                                                     onClick={toggleAccordion || (market_active ? toggleAccordion : '')}
                                                 >
-                                                    <span className={`icon ${item} ${open_accordion ? 'active' : ''}`} />
+                                                    <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
                                                     <span>{item}</span>
                                                     <span className={`accordion-icon icon ${open_accordion ? 'active' : ''}`} />
                                                 </div>
@@ -482,18 +475,47 @@ class Markets extends React.Component {
                                 ))}
                             </div>
                             <div className='mobile'>
-                                <ul>
-                                    {markets.map(([key]) => (
-                                        <li
-                                            onClick={scrollToMarket.bind(null, key)}
-                                            key={key}
-                                            data-market={key}
-                                            className={active_market === key ? 'active' : ''}
-                                        >
-                                            <span className={`icon ${key} ${active_market === key ? 'active' : ''}`} />
-                                        </li>
-                                    ))}
-                                </ul>
+                                <React.Fragment>
+                                    <ul>
+                                        {Object.keys(subGs).map((item) => (
+                                        
+                                            item === 'null' ? (
+                                                <React.Fragment>
+                                                    {subGs[item].subcats.map((subcat) => (
+                                                        <li
+                                                            onClick = {scrollToMarket.bind(null, subcat.key)}
+                                                            key = {subcat.key}
+                                                            data-market = {subcat.key}
+                                                            className={active_market === subcat.key ? 'active' : ''}
+                                                        >
+                                                            <span className={`icon ${subcat.key} ${active_market === subcat.key ? 'active' : ''}`} />
+                                                        </li>
+                                                    ))}
+                                                </React.Fragment>
+                                            ) : (
+                                                <React.Fragment>
+                                                    {subGs[item].subcats.map((subcat, key) => {
+                                                        if (key === 0){
+                                                            return (
+                                                                <li
+                                                                    onClick = {scrollToMarket.bind(null, subcat.key)}
+                                                                    key = {subcat.key}
+                                                                    data-market = {subcat.key}
+                                                                    className={classNames('', {
+                                                                        'active': (active_market === subcat.key || market_active),
+                                                                    })}
+                                                                >
+                                                                    <span className={`icon synthetic_index ${(active_market === subcat.key || market_active) ? 'active' : ''}`} />
+                                                                </li>
+                                                            );
+                                                        }
+                                                    })}
+                                                </React.Fragment>
+                                            )
+                                        
+                                        ))}
+                                    </ul>
+                                </React.Fragment>
                             </div>
                         </div>
                         <div
