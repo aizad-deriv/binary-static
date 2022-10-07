@@ -64,7 +64,7 @@ const ActiveSymbols = (() => {
             markets[market_name] = {
                 name         : symbol.market_display_name === 'Derived' ? symbol.subgroup_display_name : symbol.market_display_name,
                 is_active    : !symbol.is_trading_suspended && symbol.exchange_is_open,
-                subgroup_name: symbol.subgroup_display_name !== 'None' ? symbol.market_display_name : null,
+                subgroup_name: symbol.subgroup_display_name !== 'None' ? symbol.market_display_name : symbol.subgroup_display_name,
             };
             getSubmarketsForMarket(market_symbols, markets[market_name]);
         });
