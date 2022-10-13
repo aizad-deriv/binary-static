@@ -91,6 +91,12 @@ class Markets extends React.Component {
             market_symbol = Object.keys(this.markets).find(m => this.markets[m].submarkets[market_symbol]);
             Defaults.set('market', market_symbol);
         }
+        this.keys_arr = [];
+        this.markets_all.forEach((market) => {
+            if (market[1].subgroup_name !== null) {
+                this.keys_arr.push(market[0]);
+            }
+        });
         this.el_underlying = getElementById('underlying');
         this.references = {};
         this.state = {
@@ -160,7 +166,8 @@ class Markets extends React.Component {
         Object.entries(market_nodes).forEach(([key, node]) => {
 
             if (node && node.offsetParent && node.offsetTop - 41 <= position) {
-                if (key === 'baskets' || key === 'synthetics') {
+                arr.push(key);
+                if (this.keys_arr.includes(key)) {
                     this.setState({
                         subgroup_active: true,
                         open_accordion : true,
@@ -171,7 +178,6 @@ class Markets extends React.Component {
                         open_accordion : false,
                     });
                 }
-                arr.push(key);
             }
         });
         if (this.state.active_market !== arr[arr.length - 1]) {
@@ -308,6 +314,18 @@ class Markets extends React.Component {
         node.dataset.offsetHeight = node.offsetHeight;
     }
 
+    sortMarkets = (markets) => {
+        const sort_market = {};
+        markets.forEach(([key, obj]) => {
+            if (sort_market[obj.subgroup_name]){
+                sort_market[obj.subgroup_name].markets.push({ name: obj.name, key });
+            } else {
+                sort_market[obj.subgroup_name] = { markets: [{ name: obj.name, key }] };
+            }
+        });
+        return sort_market;
+    }
+
     searchSymbols = ({ target: { value: query } }) => {
         this.setState({ query });
         scrollToPosition(this.references.list, 0, 0);
@@ -386,17 +404,12 @@ class Markets extends React.Component {
             onUnderlyingClick,
             saveRef,
             scrollToMarket,
+            sortMarkets,
             toggleAccordion,
         } = this;
 
-        const sortedMarkets = {};
-        markets.forEach(([key, obj]) => {
-            if (sortedMarkets[obj.subgroup_name]){
-                sortedMarkets[obj.subgroup_name].markets.push({ name: obj.name, key });
-            } else {
-                sortedMarkets[obj.subgroup_name] = { markets: [{ name: obj.name, key }] };
-            }
-        });
+        const sorted_markets = sortMarkets(markets);
+
         return (
             <div className='markets'>
                 <div
@@ -431,11 +444,11 @@ class Markets extends React.Component {
                     <div className='markets_view'>
                         <div className='markets_column'>
                             <div className='desktop'>
-                                {Object.keys(sortedMarkets).map((item) => (
+                                {Object.keys(sorted_markets).map((item) => (
                                     <div key={item}>
-                                        {item === 'None' ? (
+                                        {item === 'null' ? (
                                             <div>
-                                                {sortedMarkets[item].markets.map((m) => (
+                                                {sorted_markets[item].markets.map((m) => (
                                                     <div
                                                         className={`market ${active_market === m.key ? 'active' : ''}`}
                                                         key={m.key}
@@ -461,7 +474,7 @@ class Markets extends React.Component {
                                                     <span className={`accordion-icon icon ${open_accordion ? 'active' : ''}`} />
                                                 </div>
                                                 <div className={`${open_accordion ? 'accordion-content--active' : 'accordion-content'}`}>
-                                                    {sortedMarkets[item].markets.map((m) => (
+                                                    {sorted_markets[item].markets.map((m) => (
                                                         <div
                                                             className={`subgroup market ${active_market === m.key ? 'active' : ''}`}
                                                             key={m.key}
@@ -480,43 +493,36 @@ class Markets extends React.Component {
                             <div className='mobile'>
                                 <React.Fragment>
                                     <ul>
-                                        {Object.keys(sortedMarkets).map((item) => (
-                                        
-                                            item === 'None' ? (
-                                                <React.Fragment>
-                                                    {sortedMarkets[item].markets.map((m) => (
-                                                        <li
-                                                            onClick = {scrollToMarket.bind(null, m.key)}
-                                                            key = {m.key}
-                                                            data-market = {m.key}
-                                                            className={active_market === m.key ? 'active' : ''}
-                                                        >
-                                                            <span className={`icon ${m.key} ${active_market === m.key ? 'active' : ''}`} />
-                                                        </li>
-                                                    ))}
-                                                </React.Fragment>
-                                            ) : (
-                                                <React.Fragment>
-                                                    {sortedMarkets[item].markets.map((m, key) => {
-                                                        if (key === 0){
-                                                            return (
-                                                                <li
-                                                                    onClick = {scrollToMarket.bind(null, m.key)}
-                                                                    key = {m.key}
-                                                                    data-market = {m.key}
-                                                                    className={classNames('', {
-                                                                        'active': (active_market === m.key || subgroup_active),
-                                                                    })}
-                                                                >
-                                                                    <span className={`icon synthetic_index ${(active_market === m.key || subgroup_active) ? 'active' : ''}`} />
-                                                                </li>
-                                                            );
-                                                        }
-                                                    })}
-                                                </React.Fragment>
-                                            )
-                                        
-                                        ))}
+                                        {Object.keys(sorted_markets).map((item) => {
+                                            const derived_category = sorted_markets[item].markets[0].key;
+                                            return (
+                                                item === 'null' ? (
+                                                    <React.Fragment>
+                                                        {sorted_markets[item].markets.map((m) => (
+                                                            <li
+                                                                onClick = {scrollToMarket.bind(null, m.key)}
+                                                                key = {m.key}
+                                                                data-market = {m.key}
+                                                                className={active_market === m.key ? 'active' : ''}
+                                                            >
+                                                                <span className={`icon ${m.key} ${active_market === m.key ? 'active' : ''}`} />
+                                                            </li>
+                                                        ))}
+                                                    </React.Fragment>
+                                                ) : (
+                                                    <li
+                                                        onClick = {scrollToMarket.bind(null, derived_category)}
+                                                        key = {derived_category}
+                                                        data-market = {derived_category}
+                                                        className={classNames('', {
+                                                            'active': (active_market === derived_category || subgroup_active),
+                                                        })}
+                                                    >
+                                                        <span className={`icon synthetic_index ${(active_market === derived_category || subgroup_active) ? 'active' : ''}`} />
+                                                    </li>
+                                                )
+                                            );
+                                        })}
                                     </ul>
                                 </React.Fragment>
                             </div>
