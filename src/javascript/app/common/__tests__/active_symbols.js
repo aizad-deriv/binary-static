@@ -16,6 +16,8 @@ const active_symbols = [
         market: "forex",
         market_display_name: "Forex",
         pip: "0.00001",
+        subgroup: "none",
+        subgroup_display_name: "None",
         submarket: "major_pairs",
         submarket_display_name: "Major Pairs",
         symbol: "frxEURUSD",
@@ -28,6 +30,8 @@ const active_symbols = [
         market: "indices",
         market_display_name: "Indices",
         pip: "0.01",
+        subgroup: "none",
+        subgroup_display_name: "None",
         submarket: "europe_OTC",
         submarket_display_name: "Europe",
         symbol: "OTC_SX5E",
@@ -64,6 +68,8 @@ describe('ActiveSymbols', () => {
             .and.to.be.a('Number');
         expect(markets.forex).to.have.property('submarkets')
             .and.to.be.an('Object');
+        expect(markets.forex).to.have.property('subgroup')
+            .and.to.be.a('String')
     });
     it('Should getSubmarkets have major_pairs and europe_OTC as a key, but not forex and minor_pairs', () => {
         const submarkets = activeSymbols.getSubmarkets(active_symbols);
