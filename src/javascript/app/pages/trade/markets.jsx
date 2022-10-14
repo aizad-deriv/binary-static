@@ -93,7 +93,7 @@ class Markets extends React.Component {
         }
         this.keys_arr = [];
         this.markets_all.forEach((market) => {
-            if (market[1].subgroup_name !== null) {
+            if (market[1].subgroup_name !== 'None') {
                 this.keys_arr.push(market[0]);
             }
         });
@@ -446,7 +446,7 @@ class Markets extends React.Component {
                             <div className='desktop'>
                                 {Object.keys(sorted_markets).map((item) => (
                                     <div key={item}>
-                                        {item === 'null' ? (
+                                        {item === 'None' ? (
                                             <div>
                                                 {sorted_markets[item].markets.map((m) => (
                                                     <div
@@ -496,7 +496,7 @@ class Markets extends React.Component {
                                         {Object.keys(sorted_markets).map((item) => {
                                             const derived_category = sorted_markets[item].markets[0].key;
                                             return (
-                                                item === 'null' ? (
+                                                item === 'None' ? (
                                                     <React.Fragment>
                                                         {sorted_markets[item].markets.map((m) => (
                                                             <li

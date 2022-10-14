@@ -55,7 +55,7 @@ const ActiveSymbols = (() => {
         const all_markets = groupBy(all_symbols, 'market');
         const derived_markets = groupBy(all_markets.synthetic_index, 'subgroup');
         delete all_markets.synthetic_index;
-        
+
         const final_markets = { ...all_markets, ...derived_markets };
         Object.keys(final_markets).forEach((key) => {
             const market_name    = key;
@@ -64,7 +64,7 @@ const ActiveSymbols = (() => {
             markets[market_name] = {
                 name         : symbol.market === 'synthetic_index' ? symbol.subgroup_display_name : symbol.market_display_name,
                 is_active    : !symbol.is_trading_suspended && symbol.exchange_is_open,
-                subgroup_name: symbol.subgroup_display_name !== 'None' ? symbol.market_display_name : null,
+                subgroup_name: symbol.subgroup_display_name !== 'None' ? symbol.market_display_name : symbol.subgroup_display_name,
             };
             getSubmarketsForMarket(market_symbols, markets[market_name]);
         });
