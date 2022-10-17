@@ -317,10 +317,10 @@ class Markets extends React.Component {
     sortMarkets = (markets) => {
         const sort_market = {};
         markets.forEach(([key, obj]) => {
-            if (sort_market[obj.subgroup_name]){
-                sort_market[obj.subgroup_name].markets.push({ name: obj.name, key });
+            if (sort_market[obj.subgroup]){
+                sort_market[obj.subgroup].markets.push({ name: obj.name, key, subgroup_name: obj.subgroup_name });
             } else {
-                sort_market[obj.subgroup_name] = { markets: [{ name: obj.name, key }] };
+                sort_market[obj.subgroup] = { markets: [{ name: obj.name, key, subgroup_name: obj.subgroup_name }] };
             }
         });
         return sort_market;
@@ -446,7 +446,7 @@ class Markets extends React.Component {
                             <div className='desktop'>
                                 {Object.keys(sorted_markets).map((item) => (
                                     <div key={item}>
-                                        {item === 'None' ? (
+                                        {item === 'none' ? (
                                             <div>
                                                 {sorted_markets[item].markets.map((m) => (
                                                     <div
@@ -470,7 +470,7 @@ class Markets extends React.Component {
                                                     onClick={toggleAccordion || (subgroup_active ? toggleAccordion : '')}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
-                                                    <span>{item}</span>
+                                                    <span>{sorted_markets[item].markets[0].subgroup_name}</span>
                                                     <span className={`accordion-icon icon ${open_accordion ? 'active' : ''}`} />
                                                 </div>
                                                 <div className={`${open_accordion ? 'accordion-content--active' : 'accordion-content'}`}>
@@ -496,7 +496,7 @@ class Markets extends React.Component {
                                         {Object.keys(sorted_markets).map((item) => {
                                             const derived_category = sorted_markets[item].markets[0].key;
                                             return (
-                                                item === 'None' ? (
+                                                item === 'none' ? (
                                                     <React.Fragment>
                                                         {sorted_markets[item].markets.map((m) => (
                                                             <li
