@@ -93,7 +93,7 @@ class Markets extends React.Component {
         }
         this.keys_arr = [];
         this.markets_all.forEach((market) => {
-            if (market[1].subgroup_name !== 'None') {
+            if (market[1].subgroup !== 'none') {
                 this.keys_arr.push(market[0]);
             }
         });
@@ -314,16 +314,16 @@ class Markets extends React.Component {
         node.dataset.offsetHeight = node.offsetHeight;
     }
 
-    sortMarkets = (markets) => {
-        const sort_market = {};
+    groupMarkets = (markets) => {
+        const market_group = {};
         markets.forEach(([key, obj]) => {
-            if (sort_market[obj.subgroup]){
-                sort_market[obj.subgroup].markets.push({ name: obj.name, key, subgroup_name: obj.subgroup_name });
+            if (market_group[obj.subgroup]){
+                market_group[obj.subgroup].markets.push({ name: obj.name, key, subgroup_name: obj.subgroup_name });
             } else {
-                sort_market[obj.subgroup] = { markets: [{ name: obj.name, key, subgroup_name: obj.subgroup_name }] };
+                market_group[obj.subgroup] = { markets: [{ name: obj.name, key, subgroup_name: obj.subgroup_name }] };
             }
         });
-        return sort_market;
+        return market_group;
     }
 
     searchSymbols = ({ target: { value: query } }) => {
@@ -338,7 +338,6 @@ class Markets extends React.Component {
         markets_all.map(([key, market]) => {
             let found_for_market = false;
             const filter_submarkets = {};
-            // To check market contains any matching underlying.
 
             Object.entries(market.submarkets).map(([key_2, submarket]) => {
                 let found_for_submarket = false; // Same as found for market
@@ -404,11 +403,11 @@ class Markets extends React.Component {
             onUnderlyingClick,
             saveRef,
             scrollToMarket,
-            sortMarkets,
+            groupMarkets,
             toggleAccordion,
         } = this;
 
-        const sorted_markets = sortMarkets(markets);
+        const group_markets = groupMarkets(markets);
 
         return (
             <div className='markets'>
@@ -444,11 +443,11 @@ class Markets extends React.Component {
                     <div className='markets_view'>
                         <div className='markets_column'>
                             <div className='desktop'>
-                                {Object.keys(sorted_markets).map((item) => (
+                                {Object.keys(group_markets).map((item) => (
                                     <div key={item}>
                                         {item === 'none' ? (
                                             <div>
-                                                {sorted_markets[item].markets.map((m) => (
+                                                {group_markets[item].markets.map((m) => (
                                                     <div
                                                         className={`market ${active_market === m.key ? 'active' : ''}`}
                                                         key={m.key}
@@ -470,11 +469,11 @@ class Markets extends React.Component {
                                                     onClick={toggleAccordion || (subgroup_active ? toggleAccordion : '')}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
-                                                    <span>{sorted_markets[item].markets[0].subgroup_name}</span>
+                                                    <span>{group_markets[item].markets[0].subgroup_name}</span>
                                                     <span className={`accordion-icon icon ${open_accordion ? 'active' : ''}`} />
                                                 </div>
                                                 <div className={`${open_accordion ? 'accordion-content--active' : 'accordion-content'}`}>
-                                                    {sorted_markets[item].markets.map((m) => (
+                                                    {group_markets[item].markets.map((m) => (
                                                         <div
                                                             className={`subgroup market ${active_market === m.key ? 'active' : ''}`}
                                                             key={m.key}
@@ -493,12 +492,12 @@ class Markets extends React.Component {
                             <div className='mobile'>
                                 <React.Fragment>
                                     <ul>
-                                        {Object.keys(sorted_markets).map((item) => {
-                                            const derived_category = sorted_markets[item].markets[0].key;
+                                        {Object.keys(group_markets).map((item) => {
+                                            const derived_category = group_markets[item].markets[0].key;
                                             return (
                                                 item === 'none' ? (
                                                     <React.Fragment>
-                                                        {sorted_markets[item].markets.map((m) => (
+                                                        {group_markets[item].markets.map((m) => (
                                                             <li
                                                                 onClick = {scrollToMarket.bind(null, m.key)}
                                                                 key = {m.key}
