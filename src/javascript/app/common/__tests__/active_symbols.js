@@ -106,8 +106,8 @@ describe('ActiveSymbols', () => {
         const markets = activeSymbols.getMarkets(active_symbols);
         expect(markets).to.be.an('Object')
             .and.to.have.property('forex');
-            expect(markets).to.have.property('baskets');
-            expect(markets).to.not.have.property('commodities');
+        expect(markets).to.have.property('baskets');
+        expect(markets).to.not.have.property('commodities');
         expect(markets.forex).to.have.property('name')
             .and.to.be.a('String');
         expect(markets.forex).to.have.property('is_active')
@@ -115,7 +115,7 @@ describe('ActiveSymbols', () => {
         expect(markets.forex).to.have.property('submarkets')
             .and.to.be.an('Object');
         expect(markets.baskets).to.have.property('subgroup_name')
-            .and.to.be.an('String');
+            .and.to.be.a('String');
     });
     it('Should getSubmarkets have major_pairs and forex_basket as a key, but not forex and baskets', () => {
         const submarkets = activeSymbols.getSubmarkets(active_symbols);
