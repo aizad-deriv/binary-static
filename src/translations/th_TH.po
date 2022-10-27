@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-08-29 09:58\n"
+"PO-Revision-Date: 2022-10-19 05:47\n"
 "Last-Translator: \n"
 "Language-Team: Thai\n"
 "MIME-Version: 1.0\n"
@@ -538,9 +538,6 @@ msgstr "(ง) ความเป็นไปได้ในการทำข้
 msgid "(e) Size and nature"
 msgstr "(จ) ขนาดและลักษณะ"
 
-msgid "*Cryptocurrency pairs are not available for DMT5 Financial accounts registered with Deriv (V) Ltd."
-msgstr "*คู่สกุลเงินดิจิทัลไม่สามารถใช้ได้กับบัญชีการเงิน DMT5 ที่ลงทะเบียนกับ Deriv (V) Ltd."
-
 msgid "0 – 19.999%"
 msgstr "0 – 19.999%"
 
@@ -822,6 +819,9 @@ msgstr "มีตาแหลมคมในการระบุแนวโน
 
 msgid "A lifelong interest in accounting, and an aptitude for numbers"
 msgstr "มีความสนใจมานานในด้านบัญชีและมีความถนัดในการทำงานกับตัวเลข"
+
+msgid "A link can contain the word \"Binary\" and still be fake."
+msgstr "การเชื่อมโยงสามารถมีคำว่า “Binary” และยังคงเป็นของปลอม"
 
 msgid "A list of accepted payment methods"
 msgstr "วิธีการชำระเงิน"
@@ -1663,9 +1663,6 @@ msgstr "ในฐานะศูนย์กลางความรู้ไฮ
 msgid "As a result, the client's trades are executed at market as follows:"
 msgstr "ฉะนั้นแล้ว การซื้อขายของลูกค้าได้ถูกประมวลผลในตลาดดังนี้"
 
-msgid "As a strong proponent of open source, we encourage publication of findings, methods, and tools via GitHub and our technical blog at %1 You will also assist our developers in understanding and patching the bugs that you find."
-msgstr "ในฐานะผู้สนับสนุนที่แข็งแกร่งของโอเพ่นซอส เราสนับสนุนให้มีการเผยแพร่การค้นคว้า วิธีการ และเครื่องมือ ผ่านทาง GitHub และบล็อกเทคนิคของเราที่ %1 และคุณยังจะได้ช่วยผู้พัฒนาของเราให้เข้าใจและซ่อมแซมจุดบกพร่องที่คุณพบ"
-
 msgid "As an example, Expert Advisors might be able to be programmed for"
 msgstr "ตัวอย่างเช่น ที่ปรึกษาผู้เชี่ยวชาญ (Expert Advisor) อาจถูกตั้งโปรแกรมสำหรับ"
 
@@ -2151,6 +2148,9 @@ msgstr "BetOnMarkets.com มีมูลค่าซื้อขายรวม 
 
 msgid "Betting system and method"
 msgstr "ระบบการพนันและวิธีการ"
+
+msgid "Beware of the fake links."
+msgstr "โปรดระวังลิงก์ปลอม"
 
 msgid "Bid"
 msgstr "ประมูล"
@@ -2809,8 +2809,8 @@ msgstr "ลูกค้ายินยอมที่จะดำเนินต
 msgid "Clients are also advised that their rights may be prejudiced if they provide the wrong information as the Company would not be in a position to act in their best interests."
 msgstr "ลูกค้าพึงทราบว่า อาจเกิดความลำเอียงในสิทธิ์ที่ได้รับ หากลูกค้าให้ข้อมูลที่ไม่ถูกต้อง ทำให้บริษัทฯ ไม่อยู่ในสถานะที่จะดำเนินการเพื่อประโยชน์สูงสุดของลูกค้าได้"
 
-msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. This company does not offer CFDs on cryptocurrencies. %1 is not available in the Republic of Vanuatu."
-msgstr "ลูกค้าจากประเทศอื่นๆ ทั่วโลก (ยกเว้นบางประเทศ เช่น สหรัฐอเมริกา แคนาดา ฮ่องกง) จะมีบัญชี FX และบัญชี CFD Metatrader 5 ที่เปิดบัญชีกับ Deriv (V) Ltd หากแต่ บริษัทนี้ไม่มี CFD ในคริปโตเคอเรนซี่ %1 จะไม่ได้ให้บริการในสาธารณรัฐวานูอาตู"
+msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, Hong Kong) will have their FX and CFD Metatrader 5 account opened with Deriv (V) Ltd. %1 is not available in the Republic of Vanuatu."
+msgstr "ลูกค้าจากประเทศอื่นๆ ทั่วโลก (ยกเว้นบางประเทศ เช่น สหรัฐอเมริกา แคนาดา ฮ่องกง) จะมีบัญชี FX และบัญชี CFD Metatrader 5 ที่เปิดบัญชีกับ Deriv (V) Ltd หากแต่ %1 จะไม่ได้ให้บริการในสาธารณรัฐวานูอาตู"
 
 msgid "Clients from the rest of the world (excluding certain countries such as the USA, Canada, and Hong Kong) will have their account opened with Deriv (SVG) LLC."
 msgstr "ลูกค้าอื่นๆ ทั่วโลก (ที่ไม่ได้อยู่ในประเทศเหล่านี้ ได้แก่ สหรัฐอเมริกา แคนาดาและฮ่องกง) จะเปิดบัญชีกับ Deriv (SVG) LLC"
@@ -3015,6 +3015,9 @@ msgstr "หน้าที่ของบริษัทฯ"
 
 msgid "Company's rights"
 msgstr "สิทธิ์ของบริษัทฯ"
+
+msgid "Compare MetaTrader 5 accounts"
+msgstr ""
 
 msgid "Compensation under Investor Compensation Scheme"
 msgstr "ค่าตอบแทนภายใต้แผนค่าตอบแทนต่อนักลงทุน (Investor Compensation Scheme)"
@@ -3752,14 +3755,14 @@ msgstr "บัญชีทดลองใช้"
 msgid "Demo CFDs"
 msgstr "สาธิต CFD"
 
+msgid "Demo Derived"
+msgstr ""
+
 msgid "Demo Financial"
 msgstr "บัญชีทดลอง Financial"
 
 msgid "Demo Financial STP"
 msgstr "บัญชีทดลอง Financial STP"
-
-msgid "Demo Synthetic"
-msgstr "บัญชีทดลอง ดัชนีสังเคราะห์"
 
 msgid "Demo accounts do not have Payment Agent services."
 msgstr "บัญชีทดลองใช้ไม่มีบริการของบริษัทตัวแทนการชําระเงิน"
@@ -3821,8 +3824,8 @@ msgstr "ฝากเงิน: %1 วัน"
 msgid "Deposit: Instant"
 msgstr "ฝากเงิน: ทันที"
 
-msgid "Deposits and withdrawals for your MetaTrader 5 account always pass through your binary options account."
-msgstr "การฝากและถอนเงินจากบัญชี MetaTrader 5 ของท่านจะผ่านบัญชีไบนารีออปชั่นเสมอ"
+msgid "Deposits and withdrawals for your MT5 account always pass through your binary options account."
+msgstr ""
 
 msgid "Deposits and/or payments due are to be made in the currency chosen by the client from the ones specified by DIEL from time to time."
 msgstr "การฝาก และ/หรือ การครบกำหนดชำระเงิน ถูกดำเนินการตามสกุลเงินที่ลูกค้ากำหนดไว้ให้กับ DIEL ในแต่ละครั้ง"
@@ -3857,8 +3860,8 @@ msgstr "Deriv (FX) Ltd,"
 msgid "Deriv (FX) Ltd, Deriv BVI (Ltd), or"
 msgstr "Deriv (FX) จำกัด, Deriv BVI (จำกัด) หรือ"
 
-msgid "Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia. Licensed and regulated by the Labuan Financial Services Authority to carry on a money-broking business %1(licence no. MB/18/0024)%2."
-msgstr "Deriv (FX) Ltd, Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 สหพันธ์ลาบวนประเทศมาเลเซีย ได้รับการควบคุมโดย Labuan Financial Services Authority เพื่อดำเนินธุรกิจการรับฝากเงิน %1(ใบอนุญาตหมายเลข MB/18/0024)%2"
+msgid "Deriv (FX) Ltd., Lot No. F16, First Floor, Paragon Labuan, Jalan Tun Mustapha, 87000 Federal Territory of Labuan, Malaysia. Licensed and regulated by the Labuan Financial Services Authority to carry on a money-broking business %1(licence no. MB/18/0024)%2. A member of the %3Labuan Fintech Association%4."
+msgstr ""
 
 msgid "Deriv (FX) Ltd: Labuan, Territory of Malaysia"
 msgstr "Deriv (FX) Ltd: ลาบวน, ดินแดนมาเลเซีย"
@@ -3937,6 +3940,12 @@ msgstr "อนุพันธ์"
 
 msgid "Derivative investment instruments such as binary options and related markets can be highly volatile. The prices of the underlying instrument that a Binary Option refers to may fluctuate rapidly and over wide ranges and may reflect unforeseeable events or changes in conditions, none of which can be controlled by the client or %1."
 msgstr "เครื่องมือสำหรับการลงทุนอนุพันธ์ เช่น ไบนารีออปชั่น และตลาดที่เกี่ยวข้องมีความผันผวนสูง ราคาของผลิตภัณฑ์อ้างอิงซึ่งไบนารีออปชั่นอ้างอิงจะมีความไม่แน่นอน ผันผวนอย่างรวดเร็วและเกินขอบเขต และอาจเป็นเหตุการณ์ที่ไม่สามารถพยากรณ์ได้ หรือ มีการเปลี่ยนแปลงในเงื่อนไขต่างๆ หรือไม่มีปัจจัยใดเลยที่ควบคุมได้จากลูกค้า หรือ %1"
+
+msgid "Derived"
+msgstr ""
+
+msgid "Derived Account"
+msgstr ""
 
 msgid "Description"
 msgstr "รายละเอียด"
@@ -4055,8 +4064,14 @@ msgstr "ความหลากหลาย"
 msgid "Divorce Settlement"
 msgstr "ข้อตกลงการหย่า"
 
+msgid "Do not get lured to fake \"Binary\" pages!"
+msgstr "ไม่ได้รับการล่อให้ปลอม “Binary” หน้า!"
+
 msgid "Do not trade when you are tired or are under the influence of alcohol."
 msgstr "โปรดอย่าเทรดเมื่อท่านเหนื่อยล้า หรือ เมื่อท่านอยู่ในภาวะที่มีแอลกอฮอล์"
+
+msgid "Do not trust and give away your credentials on fake websites, ads or emails."
+msgstr "อย่าไว้วางใจและอย่าให้ข้อมูลประจำตัวของคุณแก่เวบไซต์ปลอม โฆษณาปลอม หรืออีเมล์ปลอม"
 
 msgid "Do you manage a social media page that's dedicated to online trading? Partner with us and convert your audience into potential profit."
 msgstr "ท่านกำลังจัดการเพจสื่อสังคมออนไลน์เฉพาะสำหรับการซื้อขายออนไลน์ใช่ไหม? ร่วมเป็นพันธมิตรกับเราเพื่อเปลี่ยนให้ผู้เยี่ยมชมเพจของท่านเป็นโอกาสสร้างรายได้"
@@ -4625,6 +4640,9 @@ msgstr "ตัวอย่าง:"
 msgid "Example: XAU/USD (Gold vs US dollar) symbol pair"
 msgstr "ตัวอย่าง: คู่สัญลักษณ์ XAU/USD (ทองคำ เทียบกับ ดอลลาร์สหรัฐ)"
 
+msgid "Examples"
+msgstr "ตัวอย่าง"
+
 msgid "Excellent English language skills, both oral and written"
 msgstr "มีทักษะภาษาอังกฤษดีเยี่ยมในการสื่อสารทางคำพูดและการเขียน"
 
@@ -4943,6 +4961,9 @@ msgstr "มีความยุติธรรม และแม่นยำ�
 msgid "Fairly and accurately describe the Agent's services to the clients."
 msgstr "อธิบายบริการของตัวแทนให้กับลูกค้าอย่างเป็นธรรมและถูกต้อง"
 
+msgid "Fake links often contain the word that looks like \"Binary\" but look out for these differences."
+msgstr ""
+
 msgid "Familiarity with Git"
 msgstr "ความคุ้นเคยกับ Git"
 
@@ -5078,9 +5099,6 @@ msgstr "ข้อมูลทางการเงิน"
 msgid "Find a trading platform that suits your experience and preferred strategy – whether you're a new or seasoned trader."
 msgstr "พบแพลตฟอร์มการซื้อขายที่เหมาะสมกับประสบการณ์ของคุณและกลยุทธ์ที่คุณกำหนดได้ ไม่ว่าคุณจะเป็นนักลงทุนใหม่ หรือ นักลงทุนผู้เชี่ยวชาญ"
 
-msgid "Find out more"
-msgstr "ดูข้อมูลเพิ่มเติม"
-
 msgid "Find out more about the costs and details of each CFD asset we offer."
 msgstr "ค้นหาข้อมูลเพิ่มเติมเกี่ยวกับต้นทุนและรายละเอียดของสินทรัพย์ CFD แต่ละรายการที่เรานำเสนอ"
 
@@ -5117,6 +5135,9 @@ msgstr "ขั้นแรก กำหนดโพซิชั่นของ�
 msgid "First-class client service."
 msgstr "บริการลูกค้าชั้นเลิศ"
 
+msgid "Fixed spreads"
+msgstr ""
+
 msgid "Fixing problems and providing feedback for improvement."
 msgstr "แก้ปัญหาและให้ข้อมูลเพื่อการปรับปรุงแก้ไขในระยะยาว"
 
@@ -5143,6 +5164,9 @@ msgstr "ติดตามผลในคำแนะนำและระยะ
 
 msgid "Follow, comply, and implement with all business-related directions, policies, and procedures of the Company as amended or re-enacted or replaced from time to time."
 msgstr "ปฏิบัติตาม เป็นไปตามหลักการ และการนำไปใช้เพื่อเป็นแนวทางที่เกี่ยวข้องกับการดำเนินธุรกิจทั้งหมด นโยบายต่างๆ และกระบวนการของบริษัทฯ ตามที่ได้แก้ไข หรือ ทำซ้ำ หรือ แทนที่ แล้วแต่กรณี"
+
+msgid "Fondex Limited "
+msgstr ""
 
 msgid "Food Services"
 msgstr "งานบริการเกี่ยวกับอาหาร"
@@ -5458,6 +5482,9 @@ msgstr "รางวัล Global Brands ปี 2018"
 
 msgid "Global Brands Magazine"
 msgstr "นิตยสาร Global Brands"
+
+msgid "Global Pop Liquidity Solutions Ltd"
+msgstr ""
 
 msgid "Glossary"
 msgstr "อภิธานศัพท์"
@@ -5843,6 +5870,9 @@ msgstr "ฉันสนใจ"
 msgid "I'm no longer interested in trading."
 msgstr "ฉันไม่สนใจการซื้อขายอีกต่อไป"
 
+msgid "I've read the above carefully."
+msgstr ""
+
 msgid "I. Trading"
 msgstr "ฌ. การซื้อขาย"
 
@@ -6010,6 +6040,9 @@ msgstr "หากการสมัครของผู้สมัครปร
 
 msgid "If the bid price is 1.05229, you'll buy 1.05229 USD for every 1 EUR you sell."
 msgstr "หากราคาเสนอซื้อ คือ 1.05229 คุณจะซื้อที่ราคา 1.05229 USD สำหรับทุกๆ 1 EUR ที่คุณขาย"
+
+msgid "If the client account has been locked or suspended and has not recorded any transactions for a period of twelve months or more, the Company reserves the right to rescind the client account funds."
+msgstr ""
 
 msgid "If the client agrees with a DRC’s decision, the client will need to accept it within 4 weeks. If the client does not respond to the DRC’s decision within 4 weeks, the complaint is considered closed."
 msgstr ""
@@ -7036,6 +7069,9 @@ msgstr "เลเวอเรจช่วยให้ท่านสามาร
 
 msgid "Leverage up to %1"
 msgstr "เลเวอเรจสูงถึง %1"
+
+msgid "Leverage up to 1:1000"
+msgstr ""
 
 msgid "Leverage, in the context of margin trading, refers to the use of margin to increase/amplify the value of a trade. Leverage is expressed as a ratio. A 50:1 leverage, for example, means that the client would be able to enter into a trade position that is of 50 times higher than the client's margin. When the client invests in a leveraged product, the client's profit or loss is based on the leveraged position, i.e. the increased/amplified value of the client's trade is determined based on the leverage ratio that the client has set for the client's account."
 msgstr "เลเวอเรจในบริบทของการซื้อขายมาร์จิน หมายถึง การใช้มาร์จินเพื่อเพิ่ม/ขยายมูลค่าของการซื้อขาย เลเวอเรจจะแสดงออกมาในรูปของอัตราส่วน เช่น เลเวอเรจ 50:1 หมายถึง ลูกค้าจะสามารถเข้าไปอยู่ในโพซิชั่นซื้อขายที่สูงกว่ามาร์จินของลูกค้า 50 เท่า เมื่อลูกค้าลงทุนในผลิตภัณฑ์เลเวอเรจ กำไรหรือขาดทุนของลูกค้าขึ้นอยู่กับโพซิชั่นที่เลเวอเรจ นั่นคือ มูลค่าที่เพิ่ม/ขยายของการซื้อขายของลูกค้าจะพิจารณาจากสัดส่วนเลเวอเรจที่ลูกค้าตั้งเอาไว้ในบัญชีของลูกค้า"
@@ -8169,6 +8205,9 @@ msgstr "OAuth App ID"
 msgid "OK"
 msgstr "OK"
 
+msgid "OK, got it"
+msgstr ""
+
 msgid "OMG/USD"
 msgstr "OMG/USD"
 
@@ -8294,6 +8333,9 @@ msgstr "เฉพาะตัวอักษร ตัวเลข เว้น�
 
 msgid "Only letters, space, hyphen, period, and apostrophe are allowed."
 msgstr "ตัวอักษร ช่องว่าง ขีดกลาง จุด และ เครื่องหมายอัญประกาศ ( ' ) เท่านั้น ที่สามารถใช้ได้"
+
+msgid "Only log in to your account at this secure link, never elsewhere."
+msgstr ""
 
 msgid "Only one account is allowed per person. No withdrawals and/or refunds may be collected on accounts opened in false names or on multiple accounts opened by the same person."
 msgstr "อนุญาตให้มีบัญชีเพียง 1 บัญชีต่อบุคคล จะไม่มีการถอน และ/หรือ คืนเงินจากบัญชีที่เปิดด้วยชื่อที่ไม่ถูกต้อง หรือ หลายๆบัญชีที่เปิดโดยคนเดียวกัน"
@@ -8438,6 +8480,9 @@ msgstr "บัญชี CFD ของเราเหมาะสําหรั�
 
 msgid "Our Company"
 msgstr "บริษัทฯ ของเรา"
+
+msgid "Our Derived account allows you to trade CFDs on Derived Indices - our proprietary Derived assets that simulate market forces."
+msgstr ""
 
 msgid "Our MT5 servers are temporarily unavailable. We're working to restore them. Please try again in a few minutes."
 msgstr "เซิร์ฟเวอร์ MT5 ของเราไม่พร้อมใช้งานชั่วคราว เรากําลังดําเนินการเพื่อฟื้นฟูพวกเขา โปรดลองอีกครั้งในอีกสักครู่"
@@ -8592,8 +8637,8 @@ msgstr "รายได้ของพันธมิตร"
 msgid "Partners"
 msgstr "พันธมิตร"
 
-msgid "Parts of this clause may not apply to Synthetic Indices."
-msgstr "บางส่วนของข้อนี้อาจใช้ไม่ได้กับดัชนีสังเคราะห์"
+msgid "Parts of this clause may not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr ""
 
 msgid "Passion for Linux and other open-source platforms"
 msgstr "มีความหลงใหลในแพลตฟอร์มลินุกซ์ และแพลตฟอร์มโอเพ่นซอสอื่นๆ"
@@ -9228,9 +9273,6 @@ msgstr "ราคา / ข้อมูลราคา"
 msgid "Primary"
 msgstr "หลัก"
 
-msgid "Prime Brokerage Services Limited"
-msgstr "Prime Brokerage Services Limited"
-
 msgid "Prior to placing an Order, which results in opening a position, the client acknowledges that it is their responsibility to ensure that their Account Free Margin is sufficient to cover the Margin required in relation to the opening of the position (the \"Margin Requirement\"), and to continuously meet the Margin Requirement."
 msgstr "ก่อนการส่งคำสั่งซื้อที่จะทำให้เกิดการเปิดธุรกรรม ลูกค้าทราบว่า ถือเป็นความรับผิดชอบของลูกค้าที่จะตรวจสอบให้แน่ใจว่า บัญชีมีมาร์จินฟรีเพียงพอสำหรับจำนวนมาร์จินที่กำหนดไว้เพื่อการเปิดธุรกรรม (\"ข้อกำหนดของมาร์จิน\") และเพื่อให้คงสภาพตามข้อกำหนดของมาร์จินนี้อย่างต่อเนื่อง"
 
@@ -9528,9 +9570,6 @@ msgstr "อ่านบทนำง่ายๆ ของเราเกี่�
 msgid "Read the %1 company blog"
 msgstr "อ่านบล็อกของบริษัท %1"
 
-msgid "Read the %1 tech blog"
-msgstr "อ่านบล็อกเทคโนโลยี %1"
-
 msgid "Ready to trade?"
 msgstr "พร้อมเทรดใช่ไหม?"
 
@@ -9546,6 +9585,9 @@ msgstr "การเปิดบัญชีจริง"
 msgid "Real CFDs"
 msgstr "บัญชีจริง CFD"
 
+msgid "Real Derived"
+msgstr ""
+
 msgid "Real Estate"
 msgstr "อสังหาริมทรัพย์"
 
@@ -9557,9 +9599,6 @@ msgstr "บัญชีจริง Financial STP"
 
 msgid "Real Money Account Opening"
 msgstr "การเปิดบัญชีเงินจริง"
-
-msgid "Real Synthetic"
-msgstr "บัญชีจริง ดัชนีสังเคราะห์"
 
 msgid "Real accounts are not available to politically exposed persons (PEPs)."
 msgstr "บัญชีจริงไม่สามารถใช้งานได้กับบุคคลที่มีสถานภาพทางการเมือง (PEPs)"
@@ -10911,6 +10950,9 @@ msgstr "สังเคราะห์"
 msgid "Synthetics Account"
 msgstr "บัญชีสังเคราะห์"
 
+msgid "Synthetics, Basket indices"
+msgstr ""
+
 msgid "System Administrator"
 msgstr "ผู้ดูแลรักษาระบบ"
 
@@ -11108,9 +11150,6 @@ msgstr "ขอขอบคุณสำหรับการลงทะเบี
 
 msgid "Thank you for your interest in partnering with us. We've made it easy for you to apply online. Just fill out the %1online application form%2 with all necessary details. If you are already registered as a %3 affiliate, you can email us at %4 instead. We will contact you directly if your application is successful."
 msgstr "ขอขอบคุณที่ท่านสนใจร่วมเป็นพันธมิตรกับเรา เราทำให้การสมัครออนไลน์นั้นง่ายสำหรับท่าน เพียงแค่กรอก %1 แบบฟอร์มออนไลน์%2 โดยบันทึกข้อมูลของท่าน ถ้าท่านได้ลงทะเบียนเป็น %3พันธมิตรแล้ว ท่านสามารถส่งอีเมล์หาเราที่ %4 เราจะติดต่อกับท่านโดยตรง หากท่านมีใบสมัครของท่านผ่านการพิจารณา"
-
-msgid "Thank you, we'll get back to you within 24 hours"
-msgstr "ขอบคุณ เราจะติดต่อกลับภายใน 24 ชั่วโมง"
 
 msgid "That contravenes any laws, regulations, instruments, ordinances, or rules that govern the operation of any exchange, financial market, or financial regulatory environment"
 msgstr "ซึ่งโต้แย้งกับกฎหมายใดๆ หลักเกณฑ์ใดๆ เครื่องมือใดๆ กฤษฎีกา หรือ กฎที่กำกับการปฏิบัติการใดๆ ในการแลกเปลี่ยน ตลาดการเงิน หรือ องค์ภาวะที่บังคับทางการเงิน"
@@ -11316,8 +11355,8 @@ msgstr "ค่าเฉลี่ย"
 msgid "The Commencement Date of this agreement shall mean the date on which the Agent's account is approved by the Company."
 msgstr "วันที่เริ่มต้นของข้อตกลงนี้หมายถึงวันที่บัญชีของตัวแทนได้รับการอนุมัติจากบริษัท"
 
-msgid "The Company Prices are determined by reference to the price of the Underlying Instrument which is quoted on external exchanges or dealing facilities that %1 selects at the Company's discretion. The Company's IT infrastructure and price aggregator system facilitate the reception of quotes from shortlisted prime brokers, who act as liquidity providers for the Company and the delivery of the quotes, derived with reference against relevant benchmark and markets, to the client. The client acknowledges that the Company Prices may differ from the Bids and Asks made available by external exchanges or dealing facilities and the Company is not liable for any losses that the client might incur arising from such differences. This clause does not apply to Synthetic Indices."
-msgstr "ราคาของบริษัท ถูกกำหนดโดยอ้างอิงจากราคาของผลิตภัณฑ์อ้างอิงซึ่งมีการให้ราคาบนพื้นที่การแลกเปลี่ยนหรือเดิมพันภายนอก โดย %1 กำหนดตามดุลยพินิจของบริษัท โครงสร้างพื้นฐานทางระบบสารสนเทศของบริษัทและระบบการรวบรวมราคาให้บริการในการรับราคาจากโบรกเกอร์ชั้นนำที่บริษัทได้คัดเลือกไว้ ที่ทำหน้าที่เป็นผู้ให้บริการทางสภาพคล่องแก่บริษัท และให้ราคาแก่ลูกค้าซึ่งราคานี้ได้มาโดยอ้างอิงกับตัวเปรียบเทียบ และตลาด ลูกค้าทราบว่าราคาของบริษัทอาจจะต่างจากราคาซื้อและขายบนพื้นที่การแลกเปลี่ยน หรือเดิมพันภายนอกและบริษัทไม่รับผิดชอบต่อการสูญเสียของลูกค้า ที่อาจจะเกิดขึ้นจากความแตกต่างดังกล่าว ข้อความนี้ไม่สามารถใช้กับดัชนีสังเคราะห์"
+msgid "The Company Prices are determined by reference to the price of the Underlying Instrument which is quoted on external exchanges or dealing facilities that %1 selects at the Company's discretion. The Company's IT infrastructure and price aggregator system facilitate the reception of quotes from shortlisted prime brokers, who act as liquidity providers for the Company and the delivery of the quotes, derived with reference against relevant benchmark and markets, to the client. The client acknowledges that the Company Prices may differ from the Bids and Asks made available by external exchanges or dealing facilities and the Company is not liable for any losses that the client might incur arising from such differences. This clause does not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr ""
 
 msgid "The Company aims to keep a record of the kinds of activity that the Company carries on in which a material conflict could arise or has arisen. The Company also maintains procedures to manage actual or potential conflicts. This includes procedures to maintain appropriate independence among members of the Company's staff who are involved in potentially conflicting activities. Such independence-upholding procedures can be followed, for example, through the operation of information barriers, physical separation of staff, the segregation of duties and responsibilities, and the maintenance of a policy of independence, which requires the Company's staff, when providing services to a client, to act in the best interests of the client and to disregard any conflicts of interest, or in some circumstances, to decline to act for a client or potential client in order to avoid conflicts of interest."
 msgstr "บริษัทฯ ปรารถนาที่จะบันทึกประเภทการใช้งาน ที่บริษัทฯ ติดตามสิ่งที่เกิดเป็นข้อขัดแย้งที่สามารถเกิดขึ้น หรือ ได้เกิดขึ้นแล้ว บริษัทฯ มีวิธีการในการบริหารความขัดแย้งแท้จริง หรือ ความเป็นไปได้ของความขัดแย้ง รวมถึงขั้นตอนในการดูแลความเหมาะสมระหว่างสมาชิกของพนักงานขอบริษัทฯ ผู้มีส่วนเกี่ยวข้องกับกิจกรรมความขัดแย้ง เช่น อุปสรรคด้านข้อมูลเชิงปฏิบัติการ การแยกทางกายภาพของพนักงาน การแบ่งแยกหน้าที่และความรับผิดชอบ และการบำรุงรักษานโยบายอิสระที่มีความต้องการพนักงานของบริษัทฯ เมื่อมีการส่งมอบบริการให้กับลูกค้า เพื่อปฏิบัติต่อลูกค้าให้ดีที่สุดและหลีกเลี่ยงต่อการมีผลประโยชน์ทับซ้อน"
@@ -11640,8 +11679,8 @@ msgstr "บริษัทฯ จะทำรายการเดินบั�
 msgid "The Company shall, in its absolute discretion, determine whether the application of the Introducing Broker has been successful. The Company's decision is final and is not subject to any appeal."
 msgstr "บริษัทฯ ใช้ดุลยพินิจในการพิจารณาใบสมัครของโบรกเกอร์แนะนำและอนุมัติ คำตัดสินของบริษัทฯ ถือเป็นสิ้นสุดและไม่รองรับต่อการขออุทธรณ์ใดๆ"
 
-msgid "The Company sources market data from prime brokers who act as liquidity providers, thus executing the client's transactions through a pool of aggregated liquidity from top tier banks. The services offered by the Company do not include physical delivery of foreign currency by the Company or the prime brokers to the client. The client acknowledges and agrees that such data is proprietary to the Company and any such provider, and the client will not retransmit, redistribute, publish, disclose, or display in whole or in part such data to third parties. The client represents and warrants that they will only use such data for purposes of facilitating their entry into transactions with the Company on the client's MT5 Real Account in accordance with this agreement and not for any other purpose. This clause does not apply to Synthetic Indices."
-msgstr "บริษัทจัดหาข้อมูลการตลาดจากโบรกเกอร์ชั้นนำซึ่งทำหน้าที่เป็นผู้ให้บริการสภาพคล่องดังนั้นจึงดำเนินธุรกรรมของลูกค้าผ่านกลุ่มสภาพคล่องรวมจากธนาคารชั้นนำ บริการที่บริษัทนำเสนอไม่รวมถึงการส่งมอบเงินตราต่างประเทศทางกายภาพ โดยบริษัทหรือโบรกเกอร์ชั้นนำให้กับลูกค้า ลูกค้ารับทราบและตกลงว่าข้อมูลดังกล่าวเป็นกรรมสิทธิ์ของบริษัท และผู้ให้บริการดังกล่าว และลูกค้าจะไม่ส่งซ้ำแจกจ่ายเผยแพร่เปิดเผยหรือแสดงข้อมูลดังกล่าวทั้งหมดหรือบางส่วนแก่บุคคลที่สาม ลูกค้ารับรองและรับประกันว่าพวกเขาจะใช้ข้อมูลดังกล่าวเพื่อจุดประสงค์ในการอำนวยความสะดวกในการเข้าทำธุรกรรมกับบริษัทในบัญชี MT5 จริงของลูกค้า ตามที่ระบุในสัญญานี้เท่านั้น และไม่ใช่เพื่อวัตถุประสงค์อื่นใด ข้อความนี้ใช้ไม่ได้กับดัชนีสังเคราะห์"
+msgid "The Company sources market data from prime brokers who act as liquidity providers, thus executing the client's transactions through a pool of aggregated liquidity from top tier banks. The services offered by the Company do not include physical delivery of foreign currency by the Company or the prime brokers to the client. The client acknowledges and agrees that such data is proprietary to the Company and any such provider, and the client will not retransmit, redistribute, publish, disclose, or display in whole or in part such data to third parties. The client represents and warrants that they will only use such data for purposes of facilitating their entry into transactions with the Company on the client's MT5 Real Account in accordance with this agreement and not for any other purpose. This clause does not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr ""
 
 msgid "The Company strives to ensure that all the orders placed are executed; however, this is not always possible due to material difficulty or unusual circumstances. In any instance that the Company is aware of any material difficulty relevant to the proper execution of an order, it promptly informs the client of the issue."
 msgstr "บริษัทฯ มุ่งมั่นเพื่อให้แน่ใจว่า ทุกที่คำสั่งซื้อได้ถูกดำเนินการประมวลผล อย่างไรก็ตาม ในบางกรณีที่มีความยากลำบากหรือสถานการณ์ที่ผิดปกติ อาจส่งผลต่อการประมวลผลตามปกติ โดยบริษัทฯ ได้ตระหนักถึงเงื่อนไข และสภาวการณ์ที่ไม่ปกติ หากแต่ได้จัดให้มีการดำเนินการที่เหมาะสมต่อคำสั่งซื้อ ซึ่งจะแจ้งให้ลูกค้าทราบทันทีหากพบปัญหาใดๆ ดังกล่าว"
@@ -11740,6 +11779,9 @@ msgid "The DRC may request additional information from the client or the Company
 msgstr ""
 
 msgid "The DRC will decide on the complaint (it should be noted that the DRC mentions no timeframe for announcing its decision)."
+msgstr ""
+
+msgid "The Derived account allows you to trade contracts for difference (CFDs) on synthetics that mimic real-world movements. Available for trading 24/7 and audited for fairness by an independent third party."
 msgstr ""
 
 msgid "The Domain Name System (DNS) allows you to access a website through a user-friendly web address such as %1, instead of a complicated IP address."
@@ -11946,9 +11988,6 @@ msgstr "สเปรดอาจมีการเปลี่ยนแปลง
 msgid "The Stop Out Level applicable to the client's MT5 Real Account may differ from the default Stop Out Level published on the Company website."
 msgstr "ระดับยุติการซื้อขายที่ใช้กับบัญชี MT5 จริงของลูกค้า อาจจะแตกต่างจากระดับยุติการซื้อขายที่แจ้งไว้บนเว็บไซต์ของบริษัทฯ"
 
-msgid "The Synthetic account allows you to trade contracts for difference (CFDs) on synthetic indices that mimic real-world movements. Available for trading 24/7 and audited for fairness by an independent third party."
-msgstr "บัญชีสังเคราะห์อนุญาตให้คุณทำสัญญาซื้อขายในส่วนต่าง (CFD) กับดัชนีสังเคราะห์ที่เลียนแบบการเคลื่อนไหวจริง และมีให้บริการทุกวันตลอด 24 ชั่วโมง ผ่านการตรวจสอบความเป็นธรรมโดยกลุ่มบุคคลที่สาม"
-
 msgid "The System Administration team is responsible for the upkeep, configuration, and reliable operation of our computer software, hardware, and networks."
 msgstr "ทีมเจ้าหน้าที่ดูแลระบบรับผิดชอบในการดูแล ตั้งค่า และดำเนินการงานปฏิบัติการที่เกี่ยวข้องกับงานซอฟท์แวร์ ฮาร์ดแวร์ และเครือข่าย"
 
@@ -12029,6 +12068,9 @@ msgstr "ข้อความดังกล่าวข้างต้นจะ
 
 msgid "The clauses above shall not apply in its entirety to any Introducing Brokers who are contracted to provide Introducing Broker services with Deriv Investments (Europe) Limited."
 msgstr "ข้อกำหนดข้างต้นจะไม่มีผลอย่างสมบูรณ์กับโบรกเกอร์แนะนำใดๆ ที่ทำสัญญาให้บริการโบรกเกอร์แนะนำกับ Deriv Investments (Europe) Limited"
+
+msgid "The client account funds will be rescinded if the client account has been inactive for 30 days with an account balance of USD/AUD/EUR/GBP1 or less."
+msgstr ""
 
 msgid "The client acknowledges and accepts that a trade may be subject to market rules laid down in by-laws, rules, provisions, customs, and practices of an exchange, a market, a clearing house, a body, or any other organisation involved in the execution, clearing, and/or settlement of the said trade. Should any such organisation take decisions or measures which affect a trade or an Open Position, the Company shall be entitled to take any action (including closing any Open Position of the client) that it, at its sole discretion, considers reasonable. "
 msgstr "ลูกค้าทราบและยอมรับว่า ธุรกรรมอาจจะขึ้นอยู่กับกฎของตลาดที่ประกาศในเทศบัญญัติ กฎ ข้อกำหนด เงื่อไขศุลกากร และระเบียบปฏิบัติในตลาดแลกเปลี่ยน ตลาดหนึ่งๆ หรือ สำนักหักบัญชี องค์กรที่เกี่ยวข้องกับการประมวลผล หักบัญชี และ/หรือ การชำระหนี้ของธุรกรรมที่กล่าวถึง หากองค์กรดังกล่าวตัดสินใจหรือดำเนินการตามมาตรการซึ่งมีผลกระทบกับธุรกรรมหรือสถานะเปิด บริษัทฯ จะมีสิทธิ์ที่จะปฏิบัติการ (รวมถึงการปิดสถานะเปิดของลูกค้า) ตามที่บริษัทฯ เห็นว่า เหมาะสมตามดุลยพินิจของบริษัทฯ "
@@ -12926,8 +12968,8 @@ msgstr "ข้อกำหนดนี้ถูกบังคับ โดย�
 msgid "This risk disclosure statement is not exhaustive and is not intended to constitute a comprehensive statement of all the risks to which the client might be exposed and does not describe all the risks inherent to forex and contracts for differences that exist now or which may arise in the future. Its objective is rather to provide the client with information, so that the client can reasonably understand the risks associated with forex and contracts for differences offered by %1, as it is the Company's intention to provide the client with the best possible trading experience."
 msgstr "ข้อตกลงการสงวนสิทธิ์ด้านความเสี่ยงนี้ยังไม่ครบถ้วน และไม่ได้ตั้งใจที่จะให้เป็นข้อมูลที่ครอบคลุมความเสี่ยงทั้งหมดที่ลูกค้าอาจจะเผชิญ และไม่ได้อธิบายความเสี่ยงทั้งหมดที่มีอยู่โดยธรรมชาติของฟอเร็กซ์และสัญญาการซื้อขายส่วนต่างที่มีอยู่ขณะนี้ หรือที่อาจจะเกิดขึ้นในอนาคต วัตถุประสงค์นั้นเพื่อให้ข้อมูลแก่ลูกค้าที่จะเข้าใจความเสี่ยงที่เกี่ยวข้องกับฟอเร็กซ์และสัญญาส่วนต่างที่นำเสนอโดย %1 ในความตั้งใจของบริษัทฯ ที่จะมอบประสบการณ์ในการซื้อขายที่ดีที่สุดเท่าที่จะเป็นไปได้แก่ลูกค้า"
 
-msgid "This section on force majeure events does not apply to Synthetic Indices."
-msgstr "ในวรรคนี้ของกรณีเหตุสุดวิสัยไม่สามารถใช้กับดัชนีสังเคราะห์"
+msgid "This section on force majeure events does not apply to Synthetic Indices, basket indices, and derived FX."
+msgstr ""
 
 msgid "This website's services are not made available in certain countries such as the USA, Canada, Hong Kong, or to persons under age 18."
 msgstr "บริการของเว็บไซต์นี้ไม่มีให้บริการในบางประเทศ เช่น สหรัฐอเมริกา แคนาดา ฮ่องกง หรือสำหรับผู้ที่มีอายุต่ำกว่า 18 ปี"
@@ -13153,9 +13195,6 @@ msgstr "มีข้อผิดพลาดในการเติมเงิ
 
 msgid "Top-up successful"
 msgstr "การเติมเงินสำเร็จ"
-
-msgid "TopFX Ltd"
-msgstr "TopFX Ltd"
 
 msgid "Total"
 msgstr "ผลรวม"
@@ -13424,11 +13463,11 @@ msgstr "โอนจาก"
 msgid "Transfer funds between your real money accounts."
 msgstr "โอนเงินระหว่างบัญชีเงินจริงของท่าน"
 
-msgid "Transfer funds from your MetaTrader 5 account into your binary options account."
-msgstr "โอนเงินจากบัญชี MT5 ของท่าน สู่บัญชีไบนารีออปชั่นของท่าน"
+msgid "Transfer funds from your MT5 account into your binary options account."
+msgstr ""
 
-msgid "Transfer funds from your binary options account into your MetaTrader 5 account."
-msgstr "โอนเงินจากบัญชีไบนารีออปชั่นเข้าสู่บัญชี MetaTrader 5 ของท่าน"
+msgid "Transfer funds from your binary options account into your MT5 account."
+msgstr ""
 
 msgid "Transfer funds to a payment agent"
 msgstr "โอนเงินไปยังตัวแทนชำระเงิน"
@@ -14957,6 +14996,9 @@ msgstr "ท่านสามารถโอนเงินได้ระหว
 msgid "You may open one account for each supported cryptocurrency."
 msgstr "ท่านอาจจะเปิดหนึ่งบัญชีเพื่อรอองรับเงินดิจิทัลแต่ละประเภท"
 
+msgid "You may see links to websites with a fake Binary login page where you’ll get scammed for your money. "
+msgstr ""
+
 msgid "You must also submit a proof of address."
 msgstr "นอกจากนี้ต้องส่งหลักฐานยืนยันที่อยู่ของคุณด้วย"
 
@@ -15121,12 +15163,6 @@ msgstr "การเข้าถึงแคชเชียร์ของคุ
 
 msgid "Your account does not need authentication at this time.%1We will inform you if authentication is required in the future."
 msgstr "บัญชีของท่านยังไม่ต้องดำเนินการยืนยันตัวตนในขณะนี้ %1 เราจะแจ้งให้ทราบ หากต้องดำเนินการ"
-
-msgid "Your account funds will be rescinded if your account has been inactive for 30 days with an account balance of USD/AUD/EUR/GBP1 or less."
-msgstr "เงินในบัญชีของคุณจะถูกยกเลิกหากบัญชีของคุณไม่มีการใช้งานเป็นเวลา 30 วันด้วยยอดคงเหลือในบัญชี USD/AUD/EUR/GBP1 หรือน้อยกว่า"
-
-msgid "Your account funds will be rescinded if your account has been locked or has not recorded any transactions for a period of more than twelve months."
-msgstr "เงินในบัญชีของคุณจะถูกยกเลิกหากบัญชีของคุณถูกล็อคหรือไม่ได้บันทึกธุรกรรมใดๆ เป็นระยะเวลานานกว่าสิบสองเดือน"
 
 msgid "Your account has been verified successfully"
 msgstr "บัญชีของท่านได้รับการตรวจสอบสมบูรณ์แล้ว"
