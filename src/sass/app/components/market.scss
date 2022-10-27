@@ -147,14 +147,6 @@
                     display: flex;
                     flex-direction: column;
 
-                    .accordion-label {
-                        font-weight: 400;
-
-                        &--active {
-                            text-decoration: none;
-                            font-weight: 600;
-                        }
-                    }
                     .accordion-content {
                         flex-direction: column;
                         display: none;
