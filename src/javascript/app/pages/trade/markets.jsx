@@ -26,6 +26,36 @@ function scrollToPosition (element, to, duration) {
     }, 20);
 }
 
+// const List = ({
+//     arr,
+//     saveRef,
+//     underlying,
+//     onUnderlyingClick,
+// }) => {
+//     const sorted_markets = {};
+//     arr.forEach(([key, obj]) => {
+//         if (sorted_markets[obj.subgroup]){
+//             sorted_markets[obj.subgroup].markets.push(
+//                 { name: obj.name, key, subgroup_name: obj.subgroup_name, submarkets: obj.submarkets }
+//             );
+//         } else {
+//             sorted_markets[obj.subgroup] = { markets: [
+//                 { name: obj.name, key, subgroup_name: obj.subgroup_name, submarkets: obj.submarkets },
+//             ] };
+//         }
+//         return sorted_markets;
+//     });
+//     return (
+//         <React.Fragment>
+//             {Object.entries(sorted_markets).map((item) => (
+//                 item === 'none' ? (
+
+//                 ) : ()
+//             ))}
+//         </React.Fragment>
+//     );
+// };
+
 const List = ({
     arr,
     saveRef,
@@ -475,9 +505,9 @@ class Markets extends React.Component {
                                             >
                                                 <div
                                                     className={classNames('market', {
-                                                        'active': open_accordion || subgroup_active,
+                                                        'active': subgroup_active,
                                                     })}
-                                                    onClick={toggleAccordion || (subgroup_active ? toggleAccordion : '')}
+                                                    onClick={(toggleAccordion && scrollToMarket.bind(null, group_markets[item].markets[0].key)) || (subgroup_active ? toggleAccordion : '')}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
                                                     <span>{group_markets[item].markets[0].subgroup_name}</span>
