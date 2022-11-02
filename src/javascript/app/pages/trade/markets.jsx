@@ -393,7 +393,7 @@ class Markets extends React.Component {
         scrollToPosition(this.references.list, 0, 0);
         const markets_all = this.markets_all;
         if (!query) {
-            this.setState({ markets: markets_all });
+            this.setState({ markets: markets_all, subgroup_active: false, open_accordion: false });
             return;
         }
         const filter_markets = [];
@@ -428,11 +428,6 @@ class Markets extends React.Component {
                     this.setState({
                         subgroup_active: true,
                         open_accordion : true,
-                    });
-                } else {
-                    this.setState({
-                        subgroup_active: false,
-                        open_accordion : false,
                     });
                 }
                 filter_markets.push([key, market_copy]);
@@ -539,7 +534,7 @@ class Markets extends React.Component {
                                                     className={classNames('market', {
                                                         'active': subgroup_active,
                                                     })}
-                                                    onClick={(toggleAccordion && scrollToMarket.bind(null, group_markets[item].markets[0].key)) || (subgroup_active ? toggleAccordion : '')}
+                                                    onClick={toggleAccordion || (subgroup_active ? toggleAccordion : '')}
                                                 >
                                                     <span className={`icon synthetic_index ${open_accordion ? 'active' : ''}`} />
                                                     <span>{group_markets[item].markets[0].subgroup_name}</span>
