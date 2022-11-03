@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: binary-static\n"
 "POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2022-10-26 09:52\n"
+"PO-Revision-Date: 2022-11-03 09:56\n"
 "Last-Translator: \n"
 "Language-Team: Portuguese\n"
 "MIME-Version: 1.0\n"
@@ -4183,9 +4183,6 @@ msgstr "Baixar MT5 para Windows"
 msgid "Download MT5 for your desktop or laptop to access the powerful tools and features enjoyed by millions of traders."
 msgstr "Baixe a MT5 para o seu desktop ou laptop para acessar as ferramentas e recursos poderosos desfrutados por milhões de negociadores."
 
-msgid "Download Tick Trade App"
-msgstr "Baixe Tick Trade App"
-
 msgid "Download the %1desktop app%2 for the most secure way to access the %3 website."
 msgstr "Baixe o %1aplicativo para desktops%2 para a forma mais segura de se acessar o site da %3."
 
@@ -4490,9 +4487,6 @@ msgstr "Desfrute de uma plataforma de negociação premiada com condições de n
 
 msgid "Enjoy exciting opportunities to trade stock indices with the benefit of real-time charts and pricing."
 msgstr "Desfrute de oportunidades emocionantes para negociar Índices de Ações com o benefício de gráficos e preços em tempo real."
-
-msgid "Enjoy our fastest type of trading with our Tick Trade app, wherever you are."
-msgstr "Desfrute da nossa forma mais rápida de negociar com o aplicativo dos tique-taques, esteja onde estiver."
 
 msgid "Enlarge image"
 msgstr "Ampliar imagem"
@@ -8196,7 +8190,7 @@ msgid "November"
 msgstr "Novembro"
 
 msgid "Novice traders can use our intuitive platform to learn about trading, practise trading, and gain trading experiences. Seasoned traders can use the %1 platform and take full advantage of the wide range of trading and analysis tools we have to offer."
-msgstr "Negociadores principiantes podem usar a nossa plataforma intuitiva para aprender sobre como negociar, praticar negociações e ganhar experiência em negociações. Negociadores experientes podem usar a plataforma da %1 e tirar pleno partido da grande variedade das ferramentas de negociação e análise que temos disponíveis."
+msgstr "Traders novatos podem usar nossa plataforma intuitiva para aprender sobre negociação, praticar negociações e obter experiência em negociação. Traders experientes podem usar a plataforma %1 e aproveitar ao máximo a ampla variedade de ferramentas de negociação e análise que temos a oferecer."
 
 msgid "Now"
 msgstr "Agora"
@@ -8214,10 +8208,10 @@ msgid "Number of transactions"
 msgstr "Número de transações"
 
 msgid "Nurtures a community of potential and existing online traders through insight and mentorship"
-msgstr "Orientam comunidades de negociadores potenciais e existentes através de experiência e tutoria"
+msgstr "Alimentam uma comunidade de traders online potenciais e potenciais por meio de insights e mentoria"
 
 msgid "O. Indemnification"
-msgstr "O. Reparação"
+msgstr "O. Indenização"
 
 msgid "OAuth App ID"
 msgstr "ID de aplicativo OAuth"
@@ -8244,7 +8238,7 @@ msgid "October"
 msgstr "Outubro"
 
 msgid "Offices in Malaysia, Malta, Paraguay and the UAE"
-msgstr "Escritórios em Malásia, Malta, Paraguai e Emirados Árabes Unidos"
+msgstr "Escritórios na Malásia, em Malta, no Paraguai e nos Emirados Árabes Unidos"
 
 msgid "Offline"
 msgstr "Offline"
@@ -8262,7 +8256,7 @@ msgid "On the basis of the information provided in relation to your knowledge an
 msgstr "Com base nas informações fornecidas em relação aos seus conhecimentos e a sua experiência, julgamos que os investimentos disponíveis neste site não são apropriados para você."
 
 msgid "On the occurrence of an Event of Default, the Company may exercise its rights under this clause, at any time and without prior notice:"
-msgstr "Na ocorrência de um Evento de Inadimplemento, a Empresa pode exercer seus direitos sob esta cláusula, a qualquer momento e sem aviso prévio:"
+msgstr "Na ocorrência de um Evento de Inadimplência, a Empresa poderá exercer seus direitos sob esta cláusula, a qualquer momento e sem aviso prévio:"
 
 msgid "On-boarding policy"
 msgstr "Política de integração"
@@ -13021,9 +13015,6 @@ msgstr "Tique-taque"
 msgid "Tick Prediction"
 msgstr "Previsão de tique-taque"
 
-msgid "Tick Trade Android App"
-msgstr "Tick Trade Android App"
-
 msgid "Ticks"
 msgstr "Tique-taques"
 
@@ -13702,9 +13693,6 @@ msgstr "Índice USD - Mede o valor do dólar americano em relação a um conjunt
 
 msgid "USDK"
 msgstr "USDK"
-
-msgid "Ultra fast on-the-go trading"
-msgstr "Negociações ultra-rápidas em qualquer lugar"
 
 msgid "Unable to read file %1"
 msgstr "Não foi possível ler o arquivo %1"
