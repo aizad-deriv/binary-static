@@ -43,7 +43,7 @@ const List = ({
                     return (
                         group_markets[item].markets.map((obj, idx) => (
                             item === 'none' ? (
-                                <div key={item}>
+                                <div key={`${item}_${idx}`}>
                                     <div
                                         className='market'
                                         key={idx}
@@ -76,7 +76,7 @@ const List = ({
                                     </div>
                                 </div>
                             ) : (
-                                <div key={item}>
+                                <div key={`${item}_${idx}`}>
                                     <div
                                         className='market'
                                         key={idx}
@@ -398,9 +398,8 @@ class Markets extends React.Component {
         }
         const filter_markets = [];
         markets_all.map(([key, market]) => {
-            let found_for_market = false;
+            let found_for_market = false; // To check market contains any matching underlying.
             const filter_submarkets = {};
-
             Object.entries(market.submarkets).map(([key_2, submarket]) => {
                 let found_for_submarket = false; // Same as found for market
                 const filter_symbols = {};
@@ -424,13 +423,18 @@ class Markets extends React.Component {
             if (found_for_market) {
                 const market_copy = JSON.parse(JSON.stringify(market));
                 market_copy.submarkets = filter_submarkets;
-                if (this.keys_arr.includes(key)) {
+                filter_markets.push([key, market_copy]);
+                if (this.keys_arr.includes(filter_markets[0][0])) {
                     this.setState({
                         subgroup_active: true,
                         open_accordion : true,
                     });
+                } else {
+                    this.setState({
+                        subgroup_active: false,
+                        open_accordion : false,
+                    });
                 }
-                filter_markets.push([key, market_copy]);
             }
         });
 
@@ -511,8 +515,8 @@ class Markets extends React.Component {
                     <div className='markets_view'>
                         <div className='markets_column'>
                             <div className='desktop'>
-                                {Object.keys(group_markets).map((item) => (
-                                    <div key={item}>
+                                {Object.keys(group_markets).map((item, idx) => (
+                                    <div key={`${item}_${idx}`}>
                                         {item === 'none' ? (
                                             <div>
                                                 {group_markets[item].markets.map((m) => (
@@ -528,7 +532,7 @@ class Markets extends React.Component {
                                         ) : (
                                             <div
                                                 className='accordion'
-                                                key={item}
+                                                key={`${item}_${idx}`}
                                             >
                                                 <div
                                                     className={classNames('market', {
@@ -543,7 +547,7 @@ class Markets extends React.Component {
                                                 <div className={`${open_accordion ? 'accordion-content--active' : 'accordion-content'}`}>
                                                     {group_markets[item].markets.map((m) => (
                                                         <div
-                                                            className={`subgroup market ${active_market === m.key ? 'active' : ''}`}
+                                                            className={`subgroup market ${active_market === m.key ? 'subgroup-active' : ''}`}
                                                             key={m.key}
                                                             onClick={scrollToMarket.bind(null, `${m.key}`)}
                                                         >

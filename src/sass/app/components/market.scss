@@ -136,6 +136,10 @@
                         font-weight: 600;
                         border-right: 2px solid $COLOR_BLUE;
                     }
+                    &.subgroup-active {
+                        text-decoration: none;
+                        font-weight: 600;
+                    }
                     &.subgroup {
                         margin-left: 25px;
                     }
@@ -282,7 +286,7 @@
                     }
                     .label {
                         font-size: 20px;
-                        padding-bottom: 16px;
+                        padding: 16px 0px;
                         font-weight: 700;
                     }
                     .market_name {
