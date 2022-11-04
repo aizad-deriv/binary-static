@@ -59,6 +59,12 @@ const LimitsUI = (() => {
                     });
                 }
             });
+            if (limits.market_specific.synthetic_index) {
+                appendRowTable(localize('Derived'), '', 'auto', 'bold');
+                limits.market_specific.synthetic_index.forEach((submarket) => {
+                    appendRowTable(localize(submarket.name /* localize-ignore */), submarket.turnover_limit !== 'null' ? Currency.formatMoney(currency, submarket.turnover_limit, 1) : 0, '25px', 'normal');
+                });
+            }
         } else {
             const tr = findParent(getElementById('market_specific'), 'tr');
             if (tr) {
