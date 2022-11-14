@@ -1,3 +1,22 @@
+@mixin market_name($FONT-SIZE, $FONT-WEIGHT, $COLOR) {
+    font-size: $FONT-SIZE;
+    padding: 10px 0;
+    font-weight: $FONT-WEIGHT;
+    flex: 1 0 auto;
+    color: $COLOR;
+    transition: none;
+}
+@mixin sticky($FONT-WEIGHT) {
+    position: absolute;
+    width: 431px;
+    top: 60px;
+    background: $COLOR_WHITE;
+    @media (max-width: 767px) {
+        top: 123px;
+        width: calc(100% - $FONT-WEIGHT);
+    }
+}
+
 .markets {
     min-width: 120px;
     position: relative;
@@ -284,47 +303,14 @@
                     &:last-of-type {
                         padding-bottom: 80px;
                     }
-                    .label {
-                        font-size: 18px;
-                        padding: 10px 0px;
-                        font-weight: 700;
-                        flex: 1 0 auto;
-                        color: $COLOR_BLUE;
-
-                        &.sticky {
-                            position: absolute;
-                            width: 431px;
-                            top: 60px;
-                            background: $COLOR_WHITE;
-                            @media (max-width: 767px) {
-                                top: 123px;
-                                width: calc(100% - 18px);
-                            }
-                        }
-                        &.put_under {
-                            z-index: -1;
-                        }
-                    }
                     .market_name {
-                        font-size: 18px;
-                        padding: 10px 0;
-                        font-weight: 400;
-                        flex: 1 0 auto;
-                        color: $COLOR_BLUE;
-                        transition: none;
+                        @include market_name(18px, 400, $COLOR_BLUE);
                         @media (min-width: 320px) and (max-width: 767px) {
                             font-size: 16px;
                         }
 
                         &.sticky {
-                            position: absolute;
-                            width: 431px;
-                            top: 60px;
-                            background: $COLOR_WHITE;
-                            @media (max-width: 767px) {
-                                top: 123px;
-                                width: calc(100% - 16px);
-                            }
+                            @include sticky(16px);
                         }
                         &.put_under {
                             z-index: -1;
@@ -337,11 +323,7 @@
                         margin-bottom: 10px;
 
                         .submarket_name {
-                            font-size: 12px;
-                            padding: 10px 0 0;
-                            flex: 1 0 auto;
-                            font-weight: 300;
-                            color: $COLOR_ORANGE;
+                            @include market_name(12px, 300, $COLOR_ORANGE);
                             @media (min-width: 320px) and (max-width: 767px) {
                                 font-size: 12px;
                             }
@@ -393,47 +375,24 @@
                         padding-bottom: 80px;
                     }
                     .label {
-                        font-size: 18px;
-                        padding: 10px 0px;
-                        font-weight: 700;
-                        flex: 1 0 auto;
-                        color: $COLOR_BLUE;
+                        @include market_name(18px,700, $COLOR_BLUE);
 
                         &.sticky {
-                            position: absolute;
-                            width: 431px;
-                            top: 60px;
-                            background: $COLOR_WHITE;
-                            @media (max-width: 767px) {
-                                top: 123px;
-                                width: calc(100% - 18px);
-                            }
+                            @include sticky(18px);
                         }
                         &.put_under {
                             z-index: -1;
                         }
                     }
-                    .subgroup-name {
-                        font-size: 18px;
-                        padding: 10px 0;
-                        font-weight: 400;
-                        flex: 1 0 auto;
-                        color: $COLOR_BLUE;
-                        transition: none;
+                    .subgroup_name {
+                        @include market_name(18px,400, $COLOR_BLUE);
                         @media (min-width: 320px) and (max-width: 767px) {
                             font-size: 16px;
                         }
 
                         @media (min-width: 767px) {
                             &.sticky {
-                                position: absolute;
-                                width: 431px;
-                                top: 60px;
-                                background: $COLOR_WHITE;
-                                @media (max-width: 767px) {
-                                    top: 123px;
-                                    width: calc(100% - 16px);
-                                }
+                                @include sticky(16px);
                             }
                             &.put_under {
                                 z-index: -1;
@@ -447,11 +406,7 @@
                         margin-bottom: 10px;
 
                         .submarket_name {
-                            font-size: 12px;
-                            padding: 10px 0 0;
-                            flex: 1 0 auto;
-                            font-weight: 300;
-                            color: $COLOR_ORANGE;
+                            @include market_name(12px, 300, $COLOR_ORANGE);
                             @media (min-width: 320px) and (max-width: 767px) {
                                 font-size: 12px;
                             }

@@ -84,7 +84,7 @@ const List = ({
                                         ref={saveRef.bind(null,obj.key)}
                                     >
                                         {(obj.key === derived_category && isMobile()) && <div className='label'>{obj.subgroup_name}</div>}
-                                        <div className='subgroup-name'>
+                                        <div className='subgroup_name'>
                                             {obj.name}
                                         </div>
                                         {Object.entries(obj.submarket).sort((a, b) => sortSubmarket(a[0], b[0]))
