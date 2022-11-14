@@ -285,8 +285,8 @@
                         padding-bottom: 80px;
                     }
                     .label {
-                        font-size: 20px;
-                        padding: 16px 0px;
+                        font-size: 18px;
+                        padding: 10px 0px;
                         font-weight: 700;
                         flex: 1 0 auto;
                         color: $COLOR_BLUE;
@@ -298,7 +298,7 @@
                             background: $COLOR_WHITE;
                             @media (max-width: 767px) {
                                 top: 123px;
-                                width: calc(100% - 20px);
+                                width: calc(100% - 18px);
                             }
                         }
                         &.put_under {
@@ -313,7 +313,7 @@
                         color: $COLOR_BLUE;
                         transition: none;
                         @media (min-width: 320px) and (max-width: 767px) {
-                            font-size: 20px;
+                            font-size: 16px;
                         }
 
                         &.sticky {
@@ -323,7 +323,7 @@
                             background: $COLOR_WHITE;
                             @media (max-width: 767px) {
                                 top: 123px;
-                                width: calc(100% - 20px);
+                                width: calc(100% - 16px);
                             }
                         }
                         &.put_under {
@@ -343,7 +343,7 @@
                             font-weight: 300;
                             color: $COLOR_ORANGE;
                             @media (min-width: 320px) and (max-width: 767px) {
-                                font-size: 14px;
+                                font-size: 12px;
                             }
                         }
                         .symbols {
@@ -363,7 +363,117 @@
                                 transition: all 0.2s;
                                 @media (min-width: 320px) and (max-width: 767px) {
                                     width: 200px;
-                                    font-size: 16px;
+                                    font-size: 14px;
+                                }
+
+                                &:hover {
+                                    background: $COLOR_GRAY;
+                                }
+                                &.active {
+                                    background: $COLOR_BLUE;
+                                    color: $COLOR_WHITE;
+                                    @media (min-width: 320px) and (max-width: 767px) {
+                                        background: $COLOR_BLUE;
+                                        color: $COLOR_WHITE;
+                                        font-weight: normal;
+                                        padding-left: 5px;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+                .subgroup {
+                    display: flex;
+                    flex-direction: column;
+                    flex: 0 0 auto;
+                    padding-bottom: 40px;
+
+                    &:last-of-type {
+                        padding-bottom: 80px;
+                    }
+                    .label {
+                        font-size: 18px;
+                        padding: 10px 0px;
+                        font-weight: 700;
+                        flex: 1 0 auto;
+                        color: $COLOR_BLUE;
+
+                        &.sticky {
+                            position: absolute;
+                            width: 431px;
+                            top: 60px;
+                            background: $COLOR_WHITE;
+                            @media (max-width: 767px) {
+                                top: 123px;
+                                width: calc(100% - 18px);
+                            }
+                        }
+                        &.put_under {
+                            z-index: -1;
+                        }
+                    }
+                    .subgroup-name {
+                        font-size: 18px;
+                        padding: 10px 0;
+                        font-weight: 400;
+                        flex: 1 0 auto;
+                        color: $COLOR_BLUE;
+                        transition: none;
+                        @media (min-width: 320px) and (max-width: 767px) {
+                            font-size: 16px;
+                        }
+
+                        @media (min-width: 767px) {
+                            &.sticky {
+                                position: absolute;
+                                width: 431px;
+                                top: 60px;
+                                background: $COLOR_WHITE;
+                                @media (max-width: 767px) {
+                                    top: 123px;
+                                    width: calc(100% - 16px);
+                                }
+                            }
+                            &.put_under {
+                                z-index: -1;
+                            }
+                        }
+                    }
+                    .submarket {
+                        display: flex;
+                        flex-direction: column;
+                        flex: 1 0 auto;
+                        margin-bottom: 10px;
+
+                        .submarket_name {
+                            font-size: 12px;
+                            padding: 10px 0 0;
+                            flex: 1 0 auto;
+                            font-weight: 300;
+                            color: $COLOR_ORANGE;
+                            @media (min-width: 320px) and (max-width: 767px) {
+                                font-size: 12px;
+                            }
+                        }
+                        .symbols {
+                            display: flex;
+                            flex-wrap: wrap;
+                            flex-direction: row;
+                            flex: 1 0 auto;
+
+                            .symbol_name {
+                                padding: 5px;
+                                margin: 10px 0 5px 5px;
+                                line-height: 18px;
+                                cursor: pointer;
+                                width: 162px;
+                                font-size: 14px;
+                                font-weight: 400;
+                                transition: all 0.2s;
+                                @media (min-width: 320px) and (max-width: 767px) {
+                                    width: 200px;
+                                    font-size: 14px;
                                 }
 
                                 &:hover {
