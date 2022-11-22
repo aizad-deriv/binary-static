@@ -304,7 +304,7 @@
                         padding-bottom: 80px;
                     }
                     .market_name {
-                        @include market_name(18px, 400, $COLOR_BLUE);
+                        @include market_name(18px, 500, $COLOR_BLUE);
                         @media (min-width: 320px) and (max-width: 767px) {
                             font-size: 16px;
                         }
@@ -323,10 +323,7 @@
                         margin-bottom: 10px;
 
                         .submarket_name {
-                            @include market_name(12px, 300, $COLOR_ORANGE);
-                            @media (min-width: 320px) and (max-width: 767px) {
-                                font-size: 12px;
-                            }
+                            @include market_name(12px, 400, $COLOR_ORANGE);
                         }
                         .symbols {
                             display: flex;
@@ -385,7 +382,7 @@
                         }
                     }
                     .subgroup_name {
-                        @include market_name(18px,400, $COLOR_BLUE);
+                        @include market_name(18px,500, $COLOR_BLUE);
                         @media (min-width: 320px) and (max-width: 767px) {
                             font-size: 16px;
                         }
@@ -406,7 +403,7 @@
                         margin-bottom: 10px;
 
                         .submarket_name {
-                            @include market_name(12px, 300, $COLOR_ORANGE);
+                            @include market_name(12px, 400, $COLOR_ORANGE);
                             @media (min-width: 320px) and (max-width: 767px) {
                                 font-size: 12px;
                             }
