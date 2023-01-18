@@ -333,7 +333,6 @@ const SetCurrency = (() => {
     const onConfirm = ($currency_list, $error, should_create_account, redirect_to, all_fiat, all_crypto) => {
         removeError($error);
         const $selected_currency = $currency_list.find('.selected');
-        const has_fiat_account    = Client.hasCurrencyType('fiat');
 
         if ($selected_currency.length) {
             const selected_currency = $selected_currency.attr('id');
@@ -341,21 +340,17 @@ const SetCurrency = (() => {
 
             if (popup_action === 'switch_account') {
                 if (selected_currency === 'NEW'){
-                    localStorage.setItem('popup_action', 'multi_account');
-                    if (!all_fiat && !all_crypto && has_fiat_account) {
-                        onLoad(null, false, false, true);
-                    } else {
-                        onLoad(null, false, all_fiat, all_crypto);
-                    }
+                    cleanupPopup();
+                    Header.showGoToDerivAlertPopup();
                 } else {
                     cleanupPopup();
                     Header.switchLoginid(getLoginid(selected_currency), redirect_to, true);
                 }
-
                 return;
             }
             if (should_create_account) {
-                request = populateReqMultiAccount(selected_currency);
+                cleanupPopup();
+                Header.showGoToDerivAlertPopup();
             } else {
                 request = { set_account_currency: selected_currency };
             }

@@ -339,10 +339,8 @@ const Cashier = (() => {
 
                 } else {
                     el_paymentmethod_deposit.on('click', () => {
-                        el_paymentmethod_deposit.attr('href', Url.urlFor('/new_account/real_account'));
-                    });
-                    el_paymentmethod_withdraw.on('click', () => {
-                        el_paymentmethod_withdraw.attr('href', Url.urlFor('/new_account/real_account'));
+                        Header.showGoToDerivAlertPopup();
+                        return false;
                     });
                 }
             });

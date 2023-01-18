@@ -19,6 +19,8 @@ const createElement            = require('../../_common/utility').createElement;
 const findParent               = require('../../_common/utility').findParent;
 const template                 = require('../../_common/utility').template;
 const Currency                 = require('../common/currency');
+const Dialog                   = require('../common/attach_dom/dialog');
+const getLanguage              = require('../../_common/language').get;
 
 const Header = (() => {
     const onLoad = () => {
@@ -228,11 +230,26 @@ const Header = (() => {
         });
     };
 
+    const showGoToDerivAlertPopup = () => {
+        const url_on_confirm = `https://app.deriv.com/?lang=${getLanguage()}`;
+        Dialog.confirm({
+            id               : 'go-to-deriv-popup',
+            localized_title  : localize('Go to Deriv to add an account'),
+            localized_message: localize('You\'ll be able to log in to Deriv using your Binary.com credentials.'),
+            cancel_text      : localize('Cancel'),
+            ok_text          : localize('Go to Deriv'),
+            onConfirm        : () => { window.location.href = url_on_confirm; },
+            onAbort          : undefined,
+        });
+    };
+
     const showHidePulser = (should_show) => { $('.upgrademessage').children('a').setVisibility(should_show); };
 
     const showHideNewAccount = (upgrade_info) => {
+        const user_accounts = getElementById('user_accounts');
         if (upgrade_info.can_upgrade || upgrade_info.can_open_multi) {
             changeAccountsText(1, localize('Create Account'));
+            user_accounts.addEventListener('click', () => showGoToDerivAlertPopup());
         } else {
             changeAccountsText(0, localize('Accounts List'));
         }
@@ -517,6 +534,7 @@ const Header = (() => {
         loginOnClick,
         switchLoginid,
         loginIDOnClick,
+        showGoToDerivAlertPopup,
     };
 })();
 
