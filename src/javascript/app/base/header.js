@@ -239,7 +239,6 @@ const Header = (() => {
             cancel_text      : localize('Cancel'),
             ok_text          : localize('Go to Deriv'),
             onConfirm        : () => { window.location.href = url_on_confirm; },
-            onAbort          : undefined,
         });
     };
 
@@ -247,7 +246,7 @@ const Header = (() => {
 
     const showHideNewAccount = (upgrade_info) => {
         const user_accounts = getElementById('user_accounts');
-        if (upgrade_info.can_upgrade || upgrade_info.can_open_multi) {
+        if ((upgrade_info.can_upgrade || upgrade_info.can_open_multi) && user_accounts) {
             changeAccountsText(1, localize('Create Account'));
             user_accounts.addEventListener('click', () => showGoToDerivAlertPopup());
         } else {
