@@ -342,6 +342,10 @@ const Cashier = (() => {
                         Header.showGoToDerivAlertPopup();
                         return false;
                     });
+                    el_paymentmethod_withdraw.on('click', () => {
+                        Header.showGoToDerivAlertPopup();
+                        return false;
+                    });
                 }
             });
         }

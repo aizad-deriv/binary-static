@@ -149,20 +149,21 @@ const Header = (() => {
                 return;
             }
 
-            const showUpgrade = (url, params, localized_text) => {
+            const showUpgrade = (localized_text) => {
                 applyToAllElements(upgrade_msg, (el) => {
                     el.setVisibility(1);
                     applyToAllElements('a', (ele) => {
-                        ele.html(createElement('span', { text: localized_text })).setVisibility(1).setAttribute('href', Url.urlFor(url, params));
+                        ele.html(createElement('span', { text: localized_text })).setVisibility(1);
+                        ele.addEventListener('click', showGoToDerivAlertPopup);
                     }, '', el);
                 });
             };
 
-            const showUpgradeBtn = (url, params, localized_text) => {
+            const showUpgradeBtn = (localized_text) => {
                 applyToAllElements(upgrade_msg, (el) => {
                     el.setVisibility(1);
                     applyToAllElements('a.button', (ele) => {
-                        ele.html(createElement('span', { text: localized_text })).setVisibility(1).setAttribute('href', Url.urlFor(url, params));
+                        ele.html(createElement('span', { text: localized_text })).setVisibility(1).addEventListener('click', showGoToDerivAlertPopup);
                     }, '', el);
                 });
             };
@@ -197,11 +198,8 @@ const Header = (() => {
                 });
 
                 if (show_upgrade_msg) {
-                    const upgrade_url = upgrade_info.can_upgrade_to.length > 1
-                        ? 'user/accounts'
-                        : 'new_account/real_account';
-                    showUpgrade(upgrade_url, `account_type=${upgrade_info.can_upgrade_to[0]}`, upgrade_link_txt);
-                    showUpgradeBtn(upgrade_url, `account_type=${upgrade_info.can_upgrade_to[0]}`, upgrade_btn_txt);
+                    showUpgrade(upgrade_link_txt);
+                    showUpgradeBtn(upgrade_btn_txt);
                 } else {
                     applyToAllElements(upgrade_msg, (el) => {
                         applyToAllElements('a', (ele) => {
@@ -214,11 +212,8 @@ const Header = (() => {
                 }
             } else if (show_upgrade_msg) {
                 getElementById('virtual-wrapper').setVisibility(0);
-                const upgrade_url = upgrade_info.can_upgrade_to.length > 1
-                    ? 'user/accounts'
-                    : 'new_account/real_account';
-                showUpgrade(upgrade_url, `account_type=${upgrade_info.can_upgrade_to[0]}`, upgrade_link_txt);
-                showUpgradeBtn(upgrade_url, `account_type=${upgrade_info.can_upgrade_to[0]}`, upgrade_btn_txt);
+                showUpgrade(upgrade_link_txt);
+                showUpgradeBtn(upgrade_btn_txt);
 
                 if (/new_account/.test(window.location.href)) {
                     showHidePulser(0);
